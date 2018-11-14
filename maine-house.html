@@ -163,7 +163,6 @@
                     <tr>\
                         <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
                     </tr>\
-
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
