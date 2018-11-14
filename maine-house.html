@@ -42,13 +42,13 @@
         function pop_HexHouse_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>Name of Re</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Re'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>House District</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House Dist'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Name of Representative</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Re'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>House Dist</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House Dist'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -155,14 +155,15 @@
         function pop_GeoHouse_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>Name of Re</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Re'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>House District</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House Dist'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Name of Representative</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Re'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>House Dist</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House Dist'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
                     </tr>\
+
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
