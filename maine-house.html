@@ -19,6 +19,21 @@
     <body>
         <div id="map">
         </div>
+        
+        
+        <div id="text">
+        <p>
+        Maine has 151 House districts, all about the same population, probably in the ballpark of 8,000?
+        <br />
+        Maine passed comprehensive redistricting reform in the early 2010s and the current maps were all enacted in 2013.
+        <br />
+        Maine has some weird rules about how you are and aren't allowed to split towns.
+        </p>
+        </div>
+               
+        
+        
+        
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
@@ -64,7 +79,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 5.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(240,236,2,1.0)',
@@ -78,7 +93,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 5.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(59,1,231,1.0)',
@@ -92,7 +107,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 5.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(240,236,2,1.0)',
@@ -106,7 +121,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 5.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(227,0,3,1.0)',
@@ -120,7 +135,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 5.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(240,236,2,1.0)',
@@ -134,7 +149,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 5.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(223,195,122,1.0)',
@@ -270,5 +285,9 @@
         L.control.layers(baseMaps,{},{collapsed:false}).addTo(map);
         setBounds();
         </script>
+        
+        
+        
+
     </body>
 </html>
