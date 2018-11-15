@@ -20,7 +20,6 @@
         <div id="map">
         </div>
         
-        
         <div id="text">
         <p>
         Maine draws Senate districts.  There are 35 of them and they all have around 40,000 people.
@@ -29,7 +28,8 @@
         <br />
         The Senate districts are numbered from north to south, whereas the House districts are numbered the other direction.
         </p>
-        </div>        
+        </div>           
+        
         
         
         
@@ -42,24 +42,24 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/SenateGeo_0.js"></script>
-        <script src="data/SenateHex_1.js"></script>
+        <script src="data/GeoSen_0.js"></script>
+        <script src="data/HexSen_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[41.930367197623426,-74.76929766999002],[52.14500798957354,-53.97361677738141]]);
+        }).fitBounds([[36.25160634577462,-86.83333195569463],[56.93175724760615,-41.77588667519441]]);
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_SenateGeo_0(feature, layer) {
+        function pop_GeoSen_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>Senate District</strong><br />' + (feature.properties['Senate District'] !== null ? Autolinker.link(String(feature.properties['Senate District'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Senate District</strong><br />' + (feature.properties['Senate Dis'] !== null ? Autolinker.link(String(feature.properties['Senate District'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>Name of Senator</strong><br />' + (feature.properties['Name of Senator'] !== null ? Autolinker.link(String(feature.properties['Name of Senator'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Name of Senator</strong><br />' + (feature.properties['Name of Se'] !== null ? Autolinker.link(String(feature.properties['Name of Senator'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
@@ -68,11 +68,11 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_SenateGeo_0_0(feature) {
+        function style_GeoSen_0_0(feature) {
             switch(String(feature.properties['Party'])) {
                 case 'D':
                     return {
-                pane: 'pane_SenateGeo_0',
+                pane: 'pane_GeoSen_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -86,7 +86,7 @@
                     break;
                 case 'R':
                     return {
-                pane: 'pane_SenateGeo_0',
+                pane: 'pane_GeoSen_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -100,7 +100,7 @@
                     break;
                 default:
                     return {
-                pane: 'pane_SenateGeo_0',
+                pane: 'pane_GeoSen_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -114,24 +114,24 @@
                     break;
             }
         }
-        map.createPane('pane_SenateGeo_0');
-        map.getPane('pane_SenateGeo_0').style.zIndex = 400;
-        map.getPane('pane_SenateGeo_0').style['mix-blend-mode'] = 'normal';
-        var layer_SenateGeo_0 = new L.geoJson(json_SenateGeo_0, {
+        map.createPane('pane_GeoSen_0');
+        map.getPane('pane_GeoSen_0').style.zIndex = 400;
+        map.getPane('pane_GeoSen_0').style['mix-blend-mode'] = 'normal';
+        var layer_GeoSen_0 = new L.geoJson(json_GeoSen_0, {
             attribution: '',
-            pane: 'pane_SenateGeo_0',
-            onEachFeature: pop_SenateGeo_0,
-            style: style_SenateGeo_0_0,
+            pane: 'pane_GeoSen_0',
+            onEachFeature: pop_GeoSen_0,
+            style: style_GeoSen_0_0,
         });
-        bounds_group.addLayer(layer_SenateGeo_0);
-        map.addLayer(layer_SenateGeo_0);
-        function pop_SenateHex_1(feature, layer) {
+        bounds_group.addLayer(layer_GeoSen_0);
+        map.addLayer(layer_GeoSen_0);
+        function pop_HexSen_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>Senate District</strong><br />' + (feature.properties['Senate Dis'] !== null ? Autolinker.link(String(feature.properties['Senate Dis'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Senate District</strong><br />' + (feature.properties['Senate Dis'] !== null ? Autolinker.link(String(feature.properties['Senate District'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>Name of Senator</strong><br />' + (feature.properties['Name of Se'] !== null ? Autolinker.link(String(feature.properties['Name of Se'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Name of Senator</strong><br />' + (feature.properties['Name of Se'] !== null ? Autolinker.link(String(feature.properties['Name of Senator'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
@@ -139,17 +139,18 @@
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
-        function style_SenateHex_1_0(feature) {
+
+        function style_HexSen_1_0(feature) {
             switch(String(feature.properties['Party'])) {
                 case 'D':
                     return {
-                pane: 'pane_SenateHex_1',
+                pane: 'pane_HexSen_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 5.0, 
+                weight: 3.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,13,202,1.0)',
@@ -157,13 +158,13 @@
                     break;
                 case 'R':
                     return {
-                pane: 'pane_SenateHex_1',
+                pane: 'pane_HexSen_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 5.0, 
+                weight: 3.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(203,0,3,1.0)',
@@ -171,13 +172,13 @@
                     break;
                 default:
                     return {
-                pane: 'pane_SenateHex_1',
+                pane: 'pane_HexSen_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 5.0, 
+                weight: 3.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(227,174,130,1.0)',
@@ -185,17 +186,17 @@
                     break;
             }
         }
-        map.createPane('pane_SenateHex_1');
-        map.getPane('pane_SenateHex_1').style.zIndex = 401;
-        map.getPane('pane_SenateHex_1').style['mix-blend-mode'] = 'normal';
-        var layer_SenateHex_1 = new L.geoJson(json_SenateHex_1, {
+        map.createPane('pane_HexSen_1');
+        map.getPane('pane_HexSen_1').style.zIndex = 401;
+        map.getPane('pane_HexSen_1').style['mix-blend-mode'] = 'normal';
+        var layer_HexSen_1 = new L.geoJson(json_HexSen_1, {
             attribution: '',
-            pane: 'pane_SenateHex_1',
-            onEachFeature: pop_SenateHex_1,
-            style: style_SenateHex_1_0,
+            pane: 'pane_HexSen_1',
+            onEachFeature: pop_HexSen_1,
+            style: style_HexSen_1_0,
         });
-        bounds_group.addLayer(layer_SenateHex_1);
-        var baseMaps = {"Geographic":layer_SenateGeo_0, "Hex":layer_SenateHex_1};
+        bounds_group.addLayer(layer_HexSen_1);
+        var baseMaps = {"Geographic":layer_GeoSen_0, "Hex":layer_HexSen_1};
         L.control.layers(baseMaps,{},{collapsed:false}).addTo(map);
         setBounds();
         </script>

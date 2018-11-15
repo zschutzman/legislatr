@@ -29,8 +29,7 @@
         <br />
         Maine has some weird rules about how you are and aren't allowed to split towns.
         </p>
-        </div>
-               
+        </div>        
         
         
         
@@ -43,24 +42,24 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/HexHouse_0.js"></script>
-        <script src="data/GeoHouse_1.js"></script>
+        <script src="data/GeoHouse_0.js"></script>
+        <script src="data/HexHouse_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[39.672736493294984,-77.19507887215859],[49.768724821448544,-57.05090933379244]]);
+        }).fitBounds([[41.500287137626714,-82.76641083428181],[51.73327413474818,-61.81827500339942]]);
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_HexHouse_0(feature, layer) {
+        function pop_GeoHouse_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>House District</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House Dist'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>House District</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House District'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>Name of Representative</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Re'])) : '') + '</td>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Name of Representative</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Representative'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
@@ -69,124 +68,11 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_HexHouse_0_0(feature) {
+        function style_GeoHouse_0_0(feature) {
             switch(String(feature.properties['Party'])) {
                 case 'C':
                     return {
-                pane: 'pane_HexHouse_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 5.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,236,2,1.0)',
-            }
-                    break;
-                case 'D':
-                    return {
-                pane: 'pane_HexHouse_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 5.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(59,1,231,1.0)',
-            }
-                    break;
-                case 'I':
-                    return {
-                pane: 'pane_HexHouse_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 5.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,236,2,1.0)',
-            }
-                    break;
-                case 'R':
-                    return {
-                pane: 'pane_HexHouse_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 5.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(227,0,3,1.0)',
-            }
-                    break;
-                case 'U':
-                    return {
-                pane: 'pane_HexHouse_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 5.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(240,236,2,1.0)',
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_HexHouse_0',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 5.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(223,195,122,1.0)',
-            }
-                    break;
-            }
-        }
-        map.createPane('pane_HexHouse_0');
-        map.getPane('pane_HexHouse_0').style.zIndex = 400;
-        map.getPane('pane_HexHouse_0').style['mix-blend-mode'] = 'normal';
-        var layer_HexHouse_0 = new L.geoJson(json_HexHouse_0, {
-            attribution: '',
-            pane: 'pane_HexHouse_0',
-            onEachFeature: pop_HexHouse_0,
-            style: style_HexHouse_0_0,
-        });
-        bounds_group.addLayer(layer_HexHouse_0);
-        function pop_GeoHouse_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>House District</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House Dist'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>Name of Representative</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Re'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_GeoHouse_1_0(feature) {
-            switch(String(feature.properties['Party'])) {
-                case 'C':
-                    return {
-                pane: 'pane_GeoHouse_1',
+                pane: 'pane_GeoHouse_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -200,7 +86,7 @@
                     break;
                 case 'D':
                     return {
-                pane: 'pane_GeoHouse_1',
+                pane: 'pane_GeoHouse_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -214,7 +100,7 @@
                     break;
                 case 'I':
                     return {
-                pane: 'pane_GeoHouse_1',
+                pane: 'pane_GeoHouse_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -228,7 +114,7 @@
                     break;
                 case 'R':
                     return {
-                pane: 'pane_GeoHouse_1',
+                pane: 'pane_GeoHouse_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -242,7 +128,7 @@
                     break;
                 case 'U':
                     return {
-                pane: 'pane_GeoHouse_1',
+                pane: 'pane_GeoHouse_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -256,7 +142,7 @@
                     break;
                 default:
                     return {
-                pane: 'pane_GeoHouse_1',
+                pane: 'pane_GeoHouse_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -270,24 +156,133 @@
                     break;
             }
         }
-        map.createPane('pane_GeoHouse_1');
-        map.getPane('pane_GeoHouse_1').style.zIndex = 401;
-        map.getPane('pane_GeoHouse_1').style['mix-blend-mode'] = 'normal';
-        var layer_GeoHouse_1 = new L.geoJson(json_GeoHouse_1, {
+        map.createPane('pane_GeoHouse_0');
+        map.getPane('pane_GeoHouse_0').style.zIndex = 400;
+        map.getPane('pane_GeoHouse_0').style['mix-blend-mode'] = 'normal';
+        var layer_GeoHouse_0 = new L.geoJson(json_GeoHouse_0, {
             attribution: '',
-            pane: 'pane_GeoHouse_1',
-            onEachFeature: pop_GeoHouse_1,
-            style: style_GeoHouse_1_0,
+            pane: 'pane_GeoHouse_0',
+            onEachFeature: pop_GeoHouse_0,
+            style: style_GeoHouse_0_0,
         });
-        bounds_group.addLayer(layer_GeoHouse_1);
-        map.addLayer(layer_GeoHouse_1);
-        var baseMaps = {"Geographic":layer_GeoHouse_1, "Hex":layer_HexHouse_0};
+        bounds_group.addLayer(layer_GeoHouse_0);
+        map.addLayer(layer_GeoHouse_0);
+        function pop_HexHouse_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="white-space: nowrap" colspan="2"><strong>House District</strong><br />' + (feature.properties['House Dist'] !== null ? Autolinker.link(String(feature.properties['House District'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Name of Representative</strong><br />' + (feature.properties['Name of Re'] !== null ? Autolinker.link(String(feature.properties['Name of Representative'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_HexHouse_1_0(feature) {
+            switch(String(feature.properties['Party'])) {
+                case 'C':
+                    return {
+                pane: 'pane_HexHouse_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(240,236,2,1.0)',
+            }
+                    break;
+                case 'D':
+                    return {
+                pane: 'pane_HexHouse_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(59,1,231,1.0)',
+            }
+                    break;
+                case 'I':
+                    return {
+                pane: 'pane_HexHouse_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(240,236,2,1.0)',
+            }
+                    break;
+                case 'R':
+                    return {
+                pane: 'pane_HexHouse_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(227,0,3,1.0)',
+            }
+                    break;
+                case 'U':
+                    return {
+                pane: 'pane_HexHouse_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(240,236,2,1.0)',
+            }
+                    break;
+                default:
+                    return {
+                pane: 'pane_HexHouse_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(223,195,122,1.0)',
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_HexHouse_1');
+        map.getPane('pane_HexHouse_1').style.zIndex = 401;
+        map.getPane('pane_HexHouse_1').style['mix-blend-mode'] = 'normal';
+        var layer_HexHouse_1 = new L.geoJson(json_HexHouse_1, {
+            attribution: '',
+            pane: 'pane_HexHouse_1',
+            onEachFeature: pop_HexHouse_1,
+            style: style_HexHouse_1_0,
+        });
+        bounds_group.addLayer(layer_HexHouse_1);
+        var baseMaps = {"Geographic":layer_GeoHouse_0, "Hex":layer_HexHouse_1};
         L.control.layers(baseMaps,{},{collapsed:false}).addTo(map);
         setBounds();
         </script>
-        
-        
-        
-
     </body>
 </html>
