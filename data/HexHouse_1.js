@@ -1,4 +1,4 @@
-var json_HexHouse_1 = {
+var json_HexSen_1 = {
 "type": "FeatureCollection",
 "name": "HexHouse_1",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
