@@ -4,13 +4,27 @@ var control;
 var baseMaps;
 var map;
  
+var highlightLayer;
+function highlightFeature(e) {
+    highlightLayer = e.target;
+
+    if (e.target.feature.geometry.type === 'LineString') {
+        highlightLayer.setStyle({
+        color: '#ffff00',
+        });
+    } else {
+        highlightLayer.setStyle({
+        fillColor: '#ffff00',
+        fillOpacity: 1
+        });
+    }
+}
+
  
  
  
  
- 
- 
- function buildmap(filecode){
+ function buildmap(){
 map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1,
             crs : L.CRS.EPSG4326,
