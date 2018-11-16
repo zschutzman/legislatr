@@ -11,9 +11,16 @@ function sen_popup_populate(feature, layer) {
             </tr>\
         </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
+
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
 }
-
-
 function styler(feature) {
     hex=true;
     switch(String(feature.properties['Party']).charAt()) {
