@@ -9775,6 +9775,8 @@ Map.include({
 	openPopup: function (popup, latlng, options) {
 		if (!(popup instanceof Popup)) {
 			popup = new Popup(options).setContent(popup);
+            clickEvent();
+            
 		}
 
 		if (latlng) {
@@ -9965,7 +9967,6 @@ Layer.include({
 		// open the popup at the new location
 		if (layer instanceof Path) {
 			this.openPopup(e.layer || e.target, e.latlng);
-            clickEvent(e);
 			return;
 		}
 
@@ -9975,7 +9976,6 @@ Layer.include({
 			this.closePopup();
 		} else {
 			this.openPopup(layer, e.latlng);
-            clickEvent(e);
 		}
 	},
 
