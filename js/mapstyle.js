@@ -11,7 +11,8 @@ function sen_popup_populate(feature, layer) {
             </tr>\
         </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
-
+    var t = document.getElementById("districtTable");
+    t.innerHTML = popupContent;
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
