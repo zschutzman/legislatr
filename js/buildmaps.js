@@ -22,7 +22,8 @@ function highlightFeature(e) {
 
 
 function clickEvent(e){
-    console.log(document.getElementById('leaflet-popup-content'));
+    console.log(document.getElementsByClassName('leaflet-popup-content')[0].innerHTML);
+    document.getElementById('districtTable').innerHTML = document.getElementsByClassName('leaflet-popup-content')[0].innerHTML;
 }
 
 function oneachfeature(feature, layer){
