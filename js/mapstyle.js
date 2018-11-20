@@ -1,4 +1,4 @@
-/*function sen_popup_populate(feature, layer) {
+function sen_popup_populate(feature, layer) {
     var popupContent = '<table>\
             <tr>\
                 <td style="white-space: nowrap" colspan="2"><strong>Senate District</strong><br />' + (feature.properties['Senate Dis'] !== null ? Autolinker.link(String(feature.properties['SLDUST'])) : '') + '</td>\
@@ -11,6 +11,7 @@
             </tr>\
         </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
+    console.log(popupContent);
     document.getElementById('districtTable').innerHTML = popupContent;
             layer.on({
                 mouseout: function(e) {
@@ -20,7 +21,8 @@
                 },
                 mouseover: highlightFeature,
             });
-}*/
+}
+
 function styler(feature) {
     hex=true;
     switch(String(feature.properties['Party']).charAt()) {
