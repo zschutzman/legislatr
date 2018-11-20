@@ -47,7 +47,7 @@ map = L.map('map', {
         layer_Geo_0 = new L.geoJson(json_Geo_0, {
             attribution: '',
             pane: 'pane_Geo_0',
-            onEachFeature: bindPopupContent,
+            onEachFeature: sen_popup_populate,
             style: styler,
         });
         bounds_group.addLayer(layer_Geo_0);
@@ -59,7 +59,7 @@ map = L.map('map', {
         layer_Hex_1 = new L.geoJson(json_Hex_1, {
             attribution: '',
             pane: 'pane_Hex_1',
-            onEachFeature: bindPopupContent,
+            onEachFeature: sen_popup_populate,
             style: styler,
         });
 
