@@ -1,13 +1,13 @@
 function sen_popup_populate(feature, layer) {
     var popupContent = '<table>\
             <tr>\
-                <td style="white-space: nowrap" colspan="2"><strong>Senate District</strong><br />' + (feature.properties['Senate Dis'] !== null ? Autolinker.link(String(feature.properties['SLDUST'])) : '') + '</td>\
+                <td style="white-space: nowrap" colspan="2"><h4>Senate District</h4><br />' + (feature.properties['Senate Dis'] !== null ? Autolinker.link(String(feature.properties['SLDUST'])) : '') + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="2"><strong>Name of Senator</strong><br />' + (feature.properties['Name of Se'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
+                <td style="white-space: nowrap" colspan="2"><h4>Name of Senator</h4><br />' + (feature.properties['Name of Se'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
+                <td style="white-space: nowrap" colspan="2"><h4>Party</h4><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
             </tr>\
         </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
