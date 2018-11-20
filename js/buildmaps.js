@@ -22,10 +22,10 @@ function highlightFeature(e) {
 
 
 function clickEvent(e){
-    document.getElementById('leaflet-popup-content').innerHTML = document.getElementById('leaflet-popup-content').innerHTML;
+    console.log(document.getElementById('leaflet-popup-content'));
 }
 
-function oneachfeature(layer, feature){
+function oneachfeature(feature, layer){
     sen_popup_populate(feature, layer);
     layer.on({click : clickEvent});
 }
