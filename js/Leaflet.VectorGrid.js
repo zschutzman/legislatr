@@ -2536,6 +2536,8 @@ L.Canvas.Tile = L.Canvas.extend({
 		if (clickedLayer)  {
 			L.DomEvent.fakeStop(e);
 			this._fireEvent([clickedLayer], e);
+            console.log(e);
+            
 		}
 	},
 
