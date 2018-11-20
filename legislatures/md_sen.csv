@@ -1,48 +1,48 @@
-Number	Major Cities or Neighborhoods	Counties	Party	Name
-1	Cumberland, Frostburg, Oakland	Allegany, Garrett, Washington	R	George C. Edwards
-2	Hagerstown, Boonsboro	Washington	R	Andrew A. Serafini
-3	Frederick, Ballenger Creek	Frederick	D	Ronald N. Young
-4	Mt. Airy, Thurmont	Frederick, Carroll	R	Michael Hough
-5	Westminster, Taneytown	Carroll	R	Justin Ready
-6	Dundalk, Essex	Baltimore County	R	Johnny Ray Salling
-7	Fallston, Middle River	Baltimore County, Harford	R	J. B. Jennings
-8	Parkville, Perry Hall, White Marsh	Baltimore County	D	Katherine A. Klausmeier
-9	Ellicott City, Woodbine, Sykesville	Howard, Carroll	R	Gail H. Bates
-10	Reisterstown, Randallstown	Baltimore County	D	Delores G. Kelley
-11	Owings Mills, Pikesville	Baltimore County	D	Robert Zirkin
-12	Columbia, Elkridge, Halethorpe	Baltimore County, Howard	D	Edward J. Kasemeyer
-13	Columbia, Elkridge, North Laurel	Howard	D	Guy Guzzone
-14	Damascus, Olney, Burtonsville	Montgomery	D	Craig Zucker
-15	Darnestown, Poolesville, Germantown	Montgomery	D	Brian Feldman
-16	Bethesda, Potomac	Montgomery	D	Susan C. Lee
-17	Rockville, Gaithersburg	Montgomery	D	Cheryl Kagan
-18	North Bethesda, Kensington, Wheaton	Montgomery	D	Richard Madaleno
-19	Aspen Hill, Wheaton	Montgomery	D	Roger Manno
-20	Silver Spring, Takoma Park	Montgomery	D	William C. Smith Jr.
-21	Laurel, College Park, Odenton	Prince George's, Anne Arundel	D	James Rosapepe
-22	Greenbelt, Hyattsville	Prince George's	D	Paul G. Pinsky
-23	Bowie, South Laurel	Prince George's	D	Douglas J. J. Peters
-24	Largo, Seat Pleasant	Prince George's	D	Joanne C. Benson
-25	District Heights, Forestville, Andrews AFB	Prince George's	D	Ulysses Currie
-26	Fort Washington, National Harbor	Prince George's	D	C. Anthony Muse
-27	Brandywine, Hughesville, Prince Frederick	Prince George's, Calvert, Charles	D	Thomas V. Miller Jr.
-28	La Plata, Waldorf	Charles	D	Thomas M. Middleton
-29	Leonardtown, Lexington Park, Lusby	Saint Mary's, Calvert	R	Stephen M. Waugh
-30	Annapolis, Shady Side	Anne Arundel	D	John Astle
-31	Glen Burnie, Pasadena, Gibson Island	Anne Arundel	R	Bryan Simonaire
-32	Fort Meade, Glen Burnie, Linthicum	Anne Arundel	D	James E. DeGrange Sr.
-33	Arnold, Crofton, Severna Park	Anne Arundel	R	Edward R. Reilly
-34	Aberdeen, Bel Air, Edgewood	Harford	R	Robert G. Cassilly
-35	Darlington, Jarrettsville, North East	Harford, Cecil	R	H. Wayne Norman, Jr.
-36	Chestertown, Elkton, Kent Island	Cecil, Queen Anne's, Caroline, Kent	R	Stephen S. Hershey, Jr.
-37	Cambridge, Easton, Vienna	Dorchester, Caroline, Talbot, Wicomico	R	Adelaide C. Eckardt
-38	Ocean City, Pocomoke City, Salisbury	Somerset, Worcester, Wicomico	D	James N. Mathias Jr.
-39	Germantown, Montgomery Village	Montgomery	D	Nancy J. King
-40	Mount Vernon, Park Heights, Westside	Baltimore City	D	Barbara A. Robinson
-41	Edmondson, Forest Park, Roland Park	Baltimore City	D	Nathaniel T. Oaks
-42	Towson, Hereford, Hunt Valley	Baltimore County	D	James Brochin
-43	Charles Village, Govans, Beverly Hills	Baltimore City	D	Joan Carter Conway
-44	Catonsville, Lochearn, Sandtown-Winchester	Baltimore City , Baltimore County	D	Shirley Nathan-Pulliam
-45	Belair-Edison, Clifton Park, Hamilton	Baltimore City	D	Nathaniel J. McFadden
-46	Brooklyn, Canton, Inner Harbor	Baltimore City	D	Bill Ferguson
-47	Adelphi, Chillum, Mount Rainier	Prince George's	D	Victor R. Ramirez
+"District"	"Major Cities or Neighborhoods"	"Counties"	"Party"	"Name"
+1	"Cumberland, Frostburg, Oakland"	"Allegany, Garrett, Washington"	"R"	"George C. Edwards"
+2	"Hagerstown, Boonsboro"	"Washington"	"R"	"Andrew A. Serafini"
+3	"Frederick, Ballenger Creek"	"Frederick"	"D"	"Ronald N. Young"
+4	"Mt. Airy, Thurmont"	"Frederick, Carroll"	"R"	"Michael Hough"
+5	"Westminster, Taneytown"	"Carroll"	"R"	"Justin Ready"
+6	"Dundalk, Essex"	"Baltimore County"	"R"	"Johnny Ray Salling"
+7	"Fallston, Middle River"	"Baltimore County, Harford"	"R"	"J. B. Jennings"
+8	"Parkville, Perry Hall, White Marsh"	"Baltimore County"	"D"	"Katherine A. Klausmeier"
+9	"Ellicott City, Woodbine, Sykesville"	"Howard, Carroll"	"R"	"Gail H. Bates"
+10	"Reisterstown, Randallstown"	"Baltimore County"	"D"	"Delores G. Kelley"
+11	"Owings Mills, Pikesville"	"Baltimore County"	"D"	"Robert Zirkin"
+12	"Columbia, Elkridge, Halethorpe"	"Baltimore County, Howard"	"D"	"Edward J. Kasemeyer"
+13	"Columbia, Elkridge, North Laurel"	"Howard"	"D"	"Guy Guzzone"
+14	"Damascus, Olney, Burtonsville"	"Montgomery"	"D"	"Craig Zucker"
+15	"Darnestown, Poolesville, Germantown"	"Montgomery"	"D"	"Brian Feldman"
+16	"Bethesda, Potomac"	"Montgomery"	"D"	"Susan C. Lee"
+17	"Rockville, Gaithersburg"	"Montgomery"	"D"	"Cheryl Kagan"
+18	"North Bethesda, Kensington, Wheaton"	"Montgomery"	"D"	"Richard Madaleno"
+19	"Aspen Hill, Wheaton"	"Montgomery"	"D"	"Roger Manno"
+20	"Silver Spring, Takoma Park"	"Montgomery"	"D"	"William C. Smith Jr."
+21	"Laurel, College Park, Odenton"	"Prince George's, Anne Arundel"	"D"	"James Rosapepe"
+22	"Greenbelt, Hyattsville"	"Prince George's"	"D"	"Paul G. Pinsky"
+23	"Bowie, South Laurel"	"Prince George's"	"D"	"Douglas J. J. Peters"
+24	"Largo, Seat Pleasant"	"Prince George's"	"D"	"Joanne C. Benson"
+25	"District Heights, Forestville, Andrews AFB"	"Prince George's"	"D"	"Ulysses Currie"
+26	"Fort Washington, National Harbor"	"Prince George's"	"D"	"C. Anthony Muse"
+27	"Brandywine, Hughesville, Prince Frederick"	"Prince George's, Calvert, Charles"	"D"	"Thomas V. Miller Jr."
+28	"La Plata, Waldorf"	"Charles"	"D"	"Thomas M. Middleton"
+29	"Leonardtown, Lexington Park, Lusby"	"Saint Mary's, Calvert"	"R"	"Stephen M. Waugh"
+30	"Annapolis, Shady Side"	"Anne Arundel"	"D"	"John Astle"
+31	"Glen Burnie, Pasadena, Gibson Island"	"Anne Arundel"	"R"	"Bryan Simonaire"
+32	"Fort Meade, Glen Burnie, Linthicum"	"Anne Arundel"	"D"	"James E. DeGrange Sr."
+33	"Arnold, Crofton, Severna Park"	"Anne Arundel"	"R"	"Edward R. Reilly"
+34	"Aberdeen, Bel Air, Edgewood"	"Harford"	"R"	"Robert G. Cassilly"
+35	"Darlington, Jarrettsville, North East"	"Harford, Cecil"	"R"	"H. Wayne Norman, Jr."
+36	"Chestertown, Elkton, Kent Island"	"Cecil, Queen Anne's, Caroline, Kent"	"R"	"Stephen S. Hershey, Jr."
+37	"Cambridge, Easton, Vienna"	"Dorchester, Caroline, Talbot, Wicomico"	"R"	"Adelaide C. Eckardt"
+38	"Ocean City, Pocomoke City, Salisbury"	"Somerset, Worcester, Wicomico"	"D"	"James N. Mathias Jr."
+39	"Germantown, Montgomery Village"	"Montgomery"	"D"	"Nancy J. King"
+40	"Mount Vernon, Park Heights, Westside"	"Baltimore City"	"D"	"Barbara A. Robinson"
+41	"Edmondson, Forest Park, Roland Park"	"Baltimore City"	"D"	"Nathaniel T. Oaks"
+42	"Towson, Hereford, Hunt Valley"	"Baltimore County"	"D"	"James Brochin"
+43	"Charles Village, Govans, Beverly Hills"	"Baltimore City"	"D"	"Joan Carter Conway"
+44	"Catonsville, Lochearn, Sandtown-Winchester"	"Baltimore City , Baltimore County"	"D"	"Shirley Nathan-Pulliam"
+45	"Belair-Edison, Clifton Park, Hamilton"	"Baltimore City"	"D"	"Nathaniel J. McFadden"
+46	"Brooklyn, Canton, Inner Harbor"	"Baltimore City"	"D"	"Bill Ferguson"
+47	"Adelphi, Chillum, Mount Rainier"	"Prince George's"	"D"	"Victor R. Ramirez"

@@ -1,39 +1,39 @@
-District	Name[]	Party	Hometown	First elected	Towns represented	Occupation
-1	John Fonfara	Dem	Hartford	1996	Hartford (part), Wethersfield (part)	Marketing Consultant
-2	Douglas McCrory	Dem	Bloomfield	2017↑	Bloomfield (part), Hartford (part), Windsor (part)	
-3	Tim Larson	Dem	East Hartford	2014	East Hartford, East Windsor, Ellington (part), South Windsor	Insurance Executive
-4	Steve Cassano	Dem	Manchester	2010	Andover, Bolton, Glastonbury, Manchester	Daycare Owner
-	Beth Bye	Dem	West Hartford	2010	Bloomfield (part), Burlington, Farmington (part), West Hartford	Educator
-6	"Theresa ""Terry"" Gerratana"	Dem	New Britain	2011	Berlin, Farmington (part), New Britain	Teacher
-7	John A. Kissel	Rep	Enfield	1992	East Granby, Enfield, Granby (part), Somers, Suffield, Windsor (part), Windsor Locks	Corporate Attorney
-8	Kevin Witkos	Rep	Canton	2008	Avon, Barkhamsted, Canton, Colebrook, Granby (part), Hartland, Harwinton (part), New Hartford, Norfolk, Simsbury, Torrington (part)	Utility Executive
-9	Paul R. Doyle	Dem	Wethersfield	2006	Cromwell, Middletown (part), Newington, Rocky Hill, Wethersfield (part)	Attorney
-10	Gary Holder-Winfield	Dem	New Haven	2014	New Haven (part), West Haven (part)	Photographer, Business Owner
-11	Martin M. Looney	Dem	New Haven	1993	Hamden (part), New Haven (part), North Haven (part)	Attorney
-12	Ted Kennedy, Jr.	Dem	Guilford	2014	Branford, Durham (part), Guilford, Killingworth, Madison, North Branford	Attorney
-13	Len Suzio	Rep	Meriden	2016	Cheshire (part), Meriden, Middlefield, Middletown (part)	
-14	Gayle Slossberg	Dem	Milford	2004	Milford, Orange, West Haven (part), Woodbridge (part)	Retired Attorney
-1	Joan V. Hartley	Dem	Waterbury	2000	Middlebury (part), Naugatuck (part), Waterbury (part)	Teacher
-16	Joe Markley	Rep	Southington	2010	Cheshire (part), Prospect, Southington, Waterbury (part), Wolcott	Teacher
-17	George Logan	Rep	Ansonia	2016	Ansonia, Beacon Falls, Bethany, Derby, Hamden (part), Naugatuck (part), Woodbridge (part)	
-18	Heather Somers	Rep	Groton	2016	Griswold, Groton, North Stonington, Plainfield, Preston, Sterling, Stonington, Voluntown	
-19	Catherine A. Osten	Dem	Columbia	2012	Columbia, Franklin, Hebron, Lebanon, Ledyard, Lisbon, Marlborough, Montville (part), Norwich, Sprague	"Corrections officer
+"District"	"Name"	"Party"	"Hometown"	"First elected"	"Towns represented"	"Occupation"
+1	"John Fonfara"	"Dem"	"Hartford"	1996	"Hartford (part), Wethersfield (part)"	"Marketing Consultant"
+2	"Douglas McCrory"	"Dem"	"Bloomfield"	"2017↑"	"Bloomfield (part), Hartford (part), Windsor (part)"	
+3	"Tim Larson"	"Dem"	"East Hartford"	2014	"East Hartford, East Windsor, Ellington (part), South Windsor"	"Insurance Executive"
+4	"Steve Cassano"	"Dem"	"Manchester"	2010	"Andover, Bolton, Glastonbury, Manchester"	"Daycare Owner"
+5	"Beth Bye"	"Dem"	"West Hartford"	2010	"Bloomfield (part), Burlington, Farmington (part), West Hartford"	"Educator"
+6	"Theresa ""Terry"" Gerratana"	"Dem"	"New Britain"	2011	"Berlin, Farmington (part), New Britain"	"Teacher"
+7	"John A. Kissel"	"Rep"	"Enfield"	1992	"East Granby, Enfield, Granby (part), Somers, Suffield, Windsor (part), Windsor Locks"	"Corporate Attorney"
+8	"Kevin Witkos"	"Rep"	"Canton"	2008	"Avon, Barkhamsted, Canton, Colebrook, Granby (part), Hartland, Harwinton (part), New Hartford, Norfolk, Simsbury, Torrington (part)"	"Utility Executive"
+9	"Paul R. Doyle"	"Dem"	"Wethersfield"	2006	"Cromwell, Middletown (part), Newington, Rocky Hill, Wethersfield (part)"	"Attorney"
+10	"Gary Holder-Winfield"	"Dem"	"New Haven"	2014	"New Haven (part), West Haven (part)"	"Photographer, Business Owner"
+11	"Martin M. Looney"	"Dem"	"New Haven"	1993	"Hamden (part), New Haven (part), North Haven (part)"	"Attorney"
+12	"Ted Kennedy, Jr."	"Dem"	"Guilford"	2014	"Branford, Durham (part), Guilford, Killingworth, Madison, North Branford"	"Attorney"
+13	"Len Suzio"	"Rep"	"Meriden"	2016	"Cheshire (part), Meriden, Middlefield, Middletown (part)"	
+14	"Gayle Slossberg"	"Dem"	"Milford"	2004	"Milford, Orange, West Haven (part), Woodbridge (part)"	"Retired Attorney"
+15	"Joan V. Hartley"	"Dem"	"Waterbury"	2000	"Middlebury (part), Naugatuck (part), Waterbury (part)"	"Teacher"
+16	"Joe Markley"	"Rep"	"Southington"	2010	"Cheshire (part), Prospect, Southington, Waterbury (part), Wolcott"	"Teacher"
+17	"George Logan"	"Rep"	"Ansonia"	2016	"Ansonia, Beacon Falls, Bethany, Derby, Hamden (part), Naugatuck (part), Woodbridge (part)"	
+18	"Heather Somers"	"Rep"	"Groton"	2016	"Griswold, Groton, North Stonington, Plainfield, Preston, Sterling, Stonington, Voluntown"	
+19	"Catherine A. Osten"	"Dem"	"Columbia"	2012	"Columbia, Franklin, Hebron, Lebanon, Ledyard, Lisbon, Marlborough, Montville (part), Norwich, Sprague"	"Corrections officer
 First Selectman"
-20	Paul Formica	Rep	East Lyme	2014	Bozrah, East Lyme, Montville (part), New London, Old Lyme, Old Saybrook (part), Salem, Waterford	
-21	Kevin C. Kelly	Rep	Stratford	2010	Monroe (part), Seymour (part), Shelton, Stratford (part)	
-22	Marilyn Moore	Dem	Bridgeport	2014	Bridgeport (part), Monroe (part), Trumbull	
-23	Ed Gomes	Dem[6]	Bridgeport	"201↑
-(200–2013)"	Bridgeport (part), Stratford (part)	
-24	Michael McLachlan	Rep	Danbury	2008	Bethel (part), Danbury, New Fairfield, Sherman	
-2	Bob Duff	Dem	Norwalk	2000	Darien (part), Norwalk	Realtor
-26	Toni Boucher	Rep	Wilton	2008	Bethel (part), New Canaan (part), Redding, Ridgefield, Weston (part), Westport (part), Wilton	Teacher
-27	Carlo Leone	Dem	Stamford	2011	Darien (part), Stamford (part)	Financial Analyst
-28	Tony Hwang	Rep	Fairfield	2014	Easton, Fairfield, Newtown, Weston (part), Westport (part)	
-29	Mae Flexer	Dem	Danielson	2014	Brooklyn, Canterbury, Killingly, Mansfield, Putnam, Scotland, Thompson, Windham	
-30	Craig Miner	Rep	Litchfield	2016	Brookfield, Canaan, Cornwall, Goshen, Kent, Litchfield, Morris, New Milford, North Canaan, Salisbury, Sharon, Torrington (part), Warren, Winchester	
-31	Henri Martin	Rep	Bristol	2014	Bristol, Harwinton (part), Plainville, Plymouth, Thomaston	Real Estate Business Owner
-32	Eric Berthel	Rep	Watertown	2017↑	Bethlehem, Bridgewater, Middlebury (part), Oxford, Roxbury, Seymour (part), Southbury, Washington, Watertown, Woodbury	Strategic Outreach
-33	Art Linares	Rep	Westbrook	2012	Chester, Clinton, Colchester, Deep River, East Haddam, East Hampton, Essex, Haddam, Lyme, Old Saybrook (part), Portland, Westbrook	Entrepreneur
-34	Len Fasano	Rep	North Haven	2002	Durham (part), East Haven, North Haven (part), Wallingford	Attorney
-3	Tony Guglielmo	Rep	Stafford	1992	Ashford, Chaplin, Coventry, Eastford, Ellington (part), Hampton, Pomfret, Stafford, Tolland, Union, Vernon, Willington, Woodstock	
-36	Scott Frantz	Rep	Greenwich	2008	Greenwich, New Canaan (part), Stamford (part)	
+20	"Paul Formica"	"Rep"	"East Lyme"	2014	"Bozrah, East Lyme, Montville (part), New London, Old Lyme, Old Saybrook (part), Salem, Waterford"	
+21	"Kevin C. Kelly"	"Rep"	"Stratford"	2010	"Monroe (part), Seymour (part), Shelton, Stratford (part)"	
+22	"Marilyn Moore"	"Dem"	"Bridgeport"	2014	"Bridgeport (part), Monroe (part), Trumbull"	
+23	"Ed Gomes"	"Dem[6]"	"Bridgeport"	"201↑
+(200–2013)"	"Bridgeport (part), Stratford (part)"	
+24	"Michael McLachlan"	"Rep"	"Danbury"	2008	"Bethel (part), Danbury, New Fairfield, Sherman"	
+25	"Bob Duff"	"Dem"	"Norwalk"	2000	"Darien (part), Norwalk"	"Realtor"
+26	"Toni Boucher"	"Rep"	"Wilton"	2008	"Bethel (part), New Canaan (part), Redding, Ridgefield, Weston (part), Westport (part), Wilton"	"Teacher"
+27	"Carlo Leone"	"Dem"	"Stamford"	2011	"Darien (part), Stamford (part)"	"Financial Analyst"
+28	"Tony Hwang"	"Rep"	"Fairfield"	2014	"Easton, Fairfield, Newtown, Weston (part), Westport (part)"	
+29	"Mae Flexer"	"Dem"	"Danielson"	2014	"Brooklyn, Canterbury, Killingly, Mansfield, Putnam, Scotland, Thompson, Windham"	
+30	"Craig Miner"	"Rep"	"Litchfield"	2016	"Brookfield, Canaan, Cornwall, Goshen, Kent, Litchfield, Morris, New Milford, North Canaan, Salisbury, Sharon, Torrington (part), Warren, Winchester"	
+31	"Henri Martin"	"Rep"	"Bristol"	2014	"Bristol, Harwinton (part), Plainville, Plymouth, Thomaston"	"Real Estate Business Owner"
+32	"Eric Berthel"	"Rep"	"Watertown"	"2017↑"	"Bethlehem, Bridgewater, Middlebury (part), Oxford, Roxbury, Seymour (part), Southbury, Washington, Watertown, Woodbury"	"Strategic Outreach"
+33	"Art Linares"	"Rep"	"Westbrook"	2012	"Chester, Clinton, Colchester, Deep River, East Haddam, East Hampton, Essex, Haddam, Lyme, Old Saybrook (part), Portland, Westbrook"	"Entrepreneur"
+34	"Len Fasano"	"Rep"	"North Haven"	2002	"Durham (part), East Haven, North Haven (part), Wallingford"	"Attorney"
+35	"Tony Guglielmo"	"Rep"	"Stafford"	1992	"Ashford, Chaplin, Coventry, Eastford, Ellington (part), Hampton, Pomfret, Stafford, Tolland, Union, Vernon, Willington, Woodstock"	
+36	"Scott Frantz"	"Rep"	"Greenwich"	2008	"Greenwich, New Canaan (part), Stamford (part)"	
