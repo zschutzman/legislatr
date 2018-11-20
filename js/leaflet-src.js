@@ -9898,8 +9898,7 @@ Layer.include({
 
 			// update the popup (content, layout, ect...)
 			this._popup.update();
-            document.getElementById('districtTable').innerHTML = "BLAH";
-            console.log(this._popup);
+            document.getElementById('districtTable').innerHTML = this._popup._content;
 
 			// open the popup on the map
 			this._map.openPopup(this._popup, latlng);
