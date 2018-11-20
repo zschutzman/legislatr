@@ -9775,7 +9775,7 @@ Map.include({
 	openPopup: function (popup, latlng, options) {
 		if (!(popup instanceof Popup)) {
 			popup = new Popup(options).setContent(popup);
-            clickEvent();
+            
             
 		}
 
@@ -9898,6 +9898,7 @@ Layer.include({
 
 			// update the popup (content, layout, ect...)
 			this._popup.update();
+            document.getElementById('districtTable').innerHTML = document.getElementsByClassName('leaflet-popup-content')[0].innerHTML;
 
 			// open the popup on the map
 			this._map.openPopup(this._popup, latlng);
