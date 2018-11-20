@@ -19,6 +19,7 @@ function sen_popup_populate(feature, layer) {
                     }
                 },
                 mouseover: highlightFeature,
+                click: clickEvent,
             });
 }
 

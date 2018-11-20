@@ -26,10 +26,7 @@ function clickEvent(e){
     document.getElementById('districtTable').innerHTML = document.getElementsByClassName('leaflet-popup-content')[0].innerHTML;
 }
 
-function oneachfeature(feature, layer){
-    sen_popup_populate(feature, layer);
-    layer.on({click : clickEvent});
-}
+
  
  
  
@@ -50,7 +47,7 @@ map = L.map('map', {
         layer_Geo_0 = new L.geoJson(json_Geo_0, {
             attribution: '',
             pane: 'pane_Geo_0',
-            onEachFeature: oneachfeature,
+            onEachFeature: bindPopupContent,
             style: styler,
         });
         bounds_group.addLayer(layer_Geo_0);
@@ -62,7 +59,7 @@ map = L.map('map', {
         layer_Hex_1 = new L.geoJson(json_Hex_1, {
             attribution: '',
             pane: 'pane_Hex_1',
-            onEachFeature: oneachfeature,
+            onEachFeature: bindPopupContent,
             style: styler,
         });
 
