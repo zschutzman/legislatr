@@ -92,7 +92,7 @@
 .leaflet-shadow-pane  { z-index: 500; }
 .leaflet-marker-pane  { z-index: 600; }
 .leaflet-tooltip-pane   { z-index: 650; }
-.leaflet-popup-pane   { width:0px; height:0px; z-index: 700; }
+.leaflet-popup-pane   { z-index: -700; }
 
 .leaflet-map-pane canvas { z-index: 100; }
 .leaflet-map-pane svg    { z-index: 200; }
@@ -455,8 +455,7 @@
 /* popup */
 
 .leaflet-popup {
-    width: 0px;
-    height: 0px;
+    opacity: 0;
 	position: absolute;
 	text-align: center;
 	margin-bottom: 20px;

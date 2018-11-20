@@ -10,7 +10,7 @@ function sen_popup_populate(feature, layer) {
                 <td style="white-space: nowrap" colspan="2"><strong>Party</strong><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
             </tr>\
         </table>';
-    layer.bindPopup(popupContent, {maxHeight: 0});
+    layer.bindPopup(popupContent, {maxHeight: 400});
     
             layer.on({
                 mouseout: function(e) {
