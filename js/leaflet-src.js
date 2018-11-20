@@ -9898,7 +9898,7 @@ Layer.include({
 
 			// update the popup (content, layout, ect...)
 			this._popup.update();
-            document.getElementById('districtTable').innerHTML = document.getElementsByClassName('leaflet-popup-content')[0].innerHTML;
+            document.getElementById('districtTable').innerHTML = "BLAH";
 
 			// open the popup on the map
 			this._map.openPopup(this._popup, latlng);
