@@ -455,6 +455,8 @@
 /* popup */
 
 .leaflet-popup {
+    width: 0px;
+    height: 0px;
 	position: absolute;
 	text-align: center;
 	margin-bottom: 20px;
