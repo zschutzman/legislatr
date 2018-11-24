@@ -84,7 +84,8 @@ function mousein(e){
 
 map = new L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1,
-            crs : L.CRS.EPSG4326,
+            crs : L.CRS.EPSG3857,
+            zoom: 10,
             attributionControl: false,
         });
         var bounds_group = new L.featureGroup([]);
