@@ -6,7 +6,6 @@ var pane2rep = {"pane_Geo_Sen" : "Senator", "pane_Geo_House": "Representative", 
 function nth(n){return[n+"st",n+"nd",n+"rd"][((n+90)%100-10)%10-1]||n+"th"}
 
 function popup_populate(feature, layer) {
-    console.log(feature.properties);
     content = ['<table>'];
     
         
@@ -35,7 +34,6 @@ function popup_populate(feature, layer) {
     }
     content.push('</table>');
     content = content.join('');
-    console.log(content);
    
     feature.properties['infostring'] = content;
             layer.on({
