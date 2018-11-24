@@ -9898,8 +9898,15 @@ Layer.include({
 
 			// update the popup (content, layout, ect...)
 			this._popup.update();
+            
+            //ZACH ADDED THIS
+            if (this._map._container.id=='map2'){
+            document.getElementById('districtTable2').innerHTML = this._popup._content;
+            }
+            if (this._map._container.id=='map'){
             document.getElementById('districtTable').innerHTML = this._popup._content;
-
+            }
+            // END
 			// open the popup on the map
 			this._map.openPopup(this._popup, latlng);
 		}

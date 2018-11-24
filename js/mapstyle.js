@@ -1,24 +1,36 @@
-function sen_popup_populate(feature, layer) {
+var pane2reso = {"pane_Geo_Sen" : "Senate", "pane_Geo_House": "House", "pane_Geo_Cong": "Congressional", "pane_Hex_Sen" : "Senate", "pane_Hex_House": "House", "pane_Hex_Cong": "Congressional"};
+var pane2rep = {"pane_Geo_Sen" : "Senator", "pane_Geo_House": "Representative", "pane_Geo_Cong": "Representative", "pane_Hex_Sen" : "Senator", "pane_Hex_House": "Representative", "pane_Hex_Cong": "Representative"};
+
+
+
+function nth(n){return[n+"st",n+"nd",n+"rd"][((n+90)%100-10)%10-1]||n+"th"}
+
+function popup_populate(feature, layer) {
     var popupContent = '<table>\
             <tr>\
-                <td style="white-space: nowrap" colspan="2"><h4>Senate District</h4><br />' + (feature.properties['Senate Dis'] !== null ? Autolinker.link(String(feature.properties['SLDUST'])) : '') + '</td>\
+                <td style="white-space: nowrap" colspan="1"><h4>' + pane2reso[layer.options['pane']]  + ' District</h4><br />' + nth(parseInt(String(feature.properties['District']))) + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="2"><h4>Name of Senator</h4><br />' + (feature.properties['Name of Se'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
+                <td style="white-space: nowrap" colspan="1"><h4>Name of '+ pane2rep[layer.options['pane']] + '</h4><br />' + String(feature.properties['Name']) + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="2"><h4>Party</h4><br />' + (feature.properties['Party'] !== null ? Autolinker.link(String(feature.properties['Party'])) : '') + '</td>\
+                <td style="white-space: nowrap" colspan="1"><h4>Party</h4><br />' + String(feature.properties['Party']) + '</td>\
             </tr>\
         </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
     
-            layer.on({
+            /*layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
+                        console.log("filler");
                         e.target._eventParents[i].resetStyle(e.target);
                     }
                 },
                 mouseover: highlightFeature,
+                click: highlightFeature,
+            });*/
+            layer.on({
+                click: highlightFeature,
             });
 }
 
@@ -32,7 +44,7 @@ function styler(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: hex == true?3.0:1.0, 
+        weight: 1.5  , 
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(240,236,2,1.0)',
@@ -45,10 +57,10 @@ function styler(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: hex == true?3.0:1.0, 
+        weight: 1.5  , 
         fill: true,
         fillOpacity: 1,
-        fillColor: 'rgba(59,1,231,1.0)',
+        fillColor: 'rgba(70,112,238,1.0)',
     }
             break;
         case 'I':
@@ -58,7 +70,7 @@ function styler(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: hex == true?3.0:1.0, 
+        weight: 1.5  , 
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(240,236,2,1.0)',
@@ -71,10 +83,10 @@ function styler(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: hex == true?3.0:1.0, 
+        weight: 1.5  , 
         fill: true,
         fillOpacity: 1,
-        fillColor: 'rgba(227,0,3,1.0)',
+        fillColor: 'rgba(238,64,64,1.0)',
     }
             break;
         case 'U':
@@ -84,7 +96,7 @@ function styler(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: hex == true?3.0:1.0, 
+        weight: 1.5  , 
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(240,236,2,1.0)',
@@ -97,7 +109,7 @@ function styler(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: hex == true?3.0:1.0, 
+        weight: 1.5  , 
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(223,195,122,1.0)',

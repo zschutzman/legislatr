@@ -135,6 +135,7 @@
 	left: 0;
 	}
 .leaflet-control {
+    font-size: 16px;
 	float: left;
 	clear: both;
 	}
@@ -335,7 +336,8 @@
 
 .leaflet-control-layers {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
-	background: #fff;
+  background: #eaf3f6;
+  background: transparent;
 	border-radius: 5px;
 	}
 .leaflet-control-layers-toggle {
@@ -362,7 +364,8 @@
 .leaflet-control-layers-expanded {
 	padding: 6px 10px 6px 6px;
 	color: #333;
-	background: #fff;
+  background: #eaf3f6;
+  background: transparent;
 	}
 .leaflet-control-layers-scrollbar {
 	overflow-y: scroll;
@@ -392,7 +395,7 @@
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
-	background: #fff;
+  background: #eaf3f6;
 	background: rgba(255, 255, 255, 0.7);
 	margin: 0;
 	}
