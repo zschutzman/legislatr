@@ -5,6 +5,14 @@ var pane2rep = {"pane_Geo_Sen" : "Senator", "pane_Geo_House": "Representative", 
 
 function nth(n){return[n+"st",n+"nd",n+"rd"][((n+90)%100-10)%10-1]||n+"th"}
 
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+
+
+
 function popup_populate(feature, layer) {
     content = ['<table>'];
     
@@ -26,7 +34,7 @@ function popup_populate(feature, layer) {
     for (field in feature.properties){
         if (field != 'District' && field != 'Party' && field != 'Name' && String(feature.properties[field]) != ''){
             content.push(' <tr>\
-                <td  colspan="1"><h4>' + String(field) + '</h4>' + String(feature.properties[field]) + '</td>\
+                <td  colspan="1"><h4>' + toTitleCase((field).replace("."," ")) + '</h4>' + String(feature.properties[field]) + '</td>\
             </tr>\
         '
             );
