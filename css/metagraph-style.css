@@ -394,6 +394,7 @@ table {
     border-spacing: 5px;
     border: 1px black solid;
     text-align: center;
+    width: 250px;
 }
 
 td { 

@@ -6,28 +6,38 @@ var pane2rep = {"pane_Geo_Sen" : "Senator", "pane_Geo_House": "Representative", 
 function nth(n){return[n+"st",n+"nd",n+"rd"][((n+90)%100-10)%10-1]||n+"th"}
 
 function popup_populate(feature, layer) {
-    var popupContent = '<table>\
-            <tr>\
-                <td style="white-space: nowrap" colspan="1"><h4>' + pane2reso[layer.options['pane']]  + ' District</h4>' + nth(parseInt(String(feature.properties['District']))) + '</td>\
+    console.log(feature.properties);
+    content = ['<table>'];
+    
+        
+     content.push(
+            '<tr>\
+                <td  colspan="1"><h4>' + pane2reso[layer.options['pane']]  + ' District</h4>' + nth(parseInt(String(feature.properties['District']))) + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="1"><h4>Name of '+ pane2rep[layer.options['pane']] + '</h4>' + String(feature.properties['Name']) + '</td>\
+                <td  colspan="1"><h4>Name of '+ pane2rep[layer.options['pane']] + '</h4>' + String(feature.properties['Name']) + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="1"><h4>Party</h4>' + String(feature.properties['Party']) + '</td>\
+                <td  colspan="1"><h4>Party</h4>' + String(feature.properties['Party']) + '</td>\
             </tr>\
-        </table>';
-    feature.properties['infostring'] = popupContent;
-            /*layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        console.log("filler");
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-                click: highlightFeature,
-            });*/
+         '
+             );
+        
+        
+    for (field in feature.properties){
+        if (field != 'District' && field != 'Party' && field != 'Name' && String(feature.properties[field]) != ''){
+            content.push(' <tr>\
+                <td  colspan="1"><h4>' + String(field) + '</h4>' + String(feature.properties[field]) + '</td>\
+            </tr>\
+        '
+            );
+        }
+    }
+    content.push('</table>');
+    content = content.join('');
+    console.log(content);
+   
+    feature.properties['infostring'] = content;
             layer.on({
                 click: highlightFeature,
                 mouseover: mousein,
