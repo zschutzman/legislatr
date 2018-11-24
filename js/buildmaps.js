@@ -172,7 +172,7 @@ map = new L.map('map', {
 
         
         baseMaps = {"Geographic House":layer_Geo_h, "Hex House":layer_Hex_h, "Geographic Senate":layer_Geo_s, "Hex Senate":layer_Hex_s, "Geographic Congress":layer_Geo_c, "Hex Congress":layer_Hex_c};
-        control = new L.control.layers(baseMaps,{},{collapsed:true}).addTo(map);
+        control = new L.control.layers(baseMaps,{},{collapsed:true, position:'bottomleft'}).addTo(map);
         map.fitBounds(bounds_group.getBounds());
         setBounds();
 
