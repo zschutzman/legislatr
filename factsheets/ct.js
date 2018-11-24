@@ -4,7 +4,7 @@ function fillfacts() {
     var ct_facts = `<main>\
     <h4>The Legislature </h4><p> Connecticut's legislature is called the General Assembly, and it is bicameral with a House of Representatives and a Senate.  Members of both houses are elected to two-year terms in even-numbered\
     years, with no term limits.  In the event of a tied vote in the Senate, the Lieutenant Governor casts the deciding vote. </p>\
-    <p> In the current legislative session, Democrats won 24 of the 36 Senate seats, and Republicans won 12.  In the House, Democrats won 91 of the 151 seats, and Republicans won 60.  All five members of the delegation to the U.S.\
+    <p> In the current legislative session, Democrats hold 24 of the 36 Senate seats, and Republicans hold 12.  In the House, Democrats hold 91 of the 151 seats, and Republicans hold 60.  All five members of the delegation to the U.S.\
     House of Representatives are Democrats.\
     </p><br />\
     <h4> Rules and Requirements </h4><p> Connecticut's congressional districts must comply with federal equal population and contiguity requirements as well as the Voting Rights Act. \
