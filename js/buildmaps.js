@@ -10,7 +10,8 @@ var map;
 var map2;
  
 var highlightLayer;
-var highlightLayer2;
+var mouseLayer;
+var highlightchar;
 function highlightFeature(e) {
     //highlightLayer = e.target;
 
@@ -24,22 +25,47 @@ function highlightFeature(e) {
     highlightLayer = e.target;    
     
     
-    
-    
+    highlightchar = String(highlightLayer.feature.properties['Party']).charAt();
+    if (highlightchar == 'D'){ highlightchar = "#9999e0";}
+    else if (highlightchar == 'R'){ highlightchar = "#e09999";}
+    else { highlightchar = "#dddddd";}
     if (e.target.feature.geometry.type === 'LineString') {
         highlightLayer.setStyle({
-        color: '#ffff00',
+        color: highlightchar,
         });
     } else {
         highlightLayer.setStyle({
-        fillColor: '#ffff00',
+        fillColor: highlightchar,
         fillOpacity: 1
         });
     }
 }
 
+function mousein(e){
+    
+        if (mouseLayer) {
+        for (i in e.target._eventParents) {
+            
+            e.target._eventParents[i].setStyle({weight: 1.5,});;
+        }
+    }
+    
+    
+    
+    mouseLayer = e.target;
 
+    if (e.target.feature.geometry.type === 'LineString') {
+        mouseLayer.setStyle({
+        weight: 5,
 
+        });
+    } else {
+        mouseLayer.setStyle({
+        weight: 5,
+
+        });
+    }
+}
 
  
  

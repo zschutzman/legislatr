@@ -31,6 +31,7 @@ function popup_populate(feature, layer) {
             });*/
             layer.on({
                 click: highlightFeature,
+                mouseover: mousein,
             });
 }
 
