@@ -17,8 +17,7 @@ function popup_populate(feature, layer) {
                 <td style="white-space: nowrap" colspan="1"><h4>Party</h4><br />' + String(feature.properties['Party']) + '</td>\
             </tr>\
         </table>';
-    layer.bindPopup(popupContent, {maxHeight: 0});
-    
+    feature.properties['infostring'] = popupContent;
             /*layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
