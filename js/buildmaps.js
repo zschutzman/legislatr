@@ -35,7 +35,7 @@ function highlightFeature(e) {
     highlightchar = String(highlightLayer.feature.properties['Party']).charAt();
     if (highlightchar == 'D'){ highlightchar = "#9999e0";}
     else if (highlightchar == 'R'){ highlightchar = "#e09999";}
-    else { highlightchar = "#dddddd";}
+    else { highlightchar = "#e0e099";}
     if (e.target.feature.geometry.type === 'LineString') {
         highlightLayer.setStyle({
         color: highlightchar,
