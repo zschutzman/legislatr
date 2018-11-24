@@ -46,28 +46,7 @@ h3 {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.clubs,
-.blue,
-.green,
-.hearts {
-  font-weight: 600;
-}
 
-.blue {
-  color: #66abff;
-}
-
-.hearts {
-  color: #9e2825;
-}
-
-.green {
-  color: #99cc9a;
-}
-
-.clubs {
-  color: #1e1e26;
-}
 
 strong {
   font-weight: normal;
@@ -212,24 +191,7 @@ svg {
   justify-content: center;
 }
 
-.metagraph-tooltip {
-  background: #555;
-  padding: 5px 5px 0px 5px;
-  margin: 0px;
-  display: none;
-}
 
-/* Chart-specific styles */
-
-.grid-container,
-.hist-container,
-.rows {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0;
-}
 
 .chart h3,
 .chart h4 {
@@ -247,16 +209,7 @@ svg {
   margin: 0;
 }
 
-.graph-container {
-  text-align: center;
-}
 
-.graph {
-  overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .chart button {
   color: white;
@@ -279,17 +232,6 @@ svg {
   background: #006b9c;
 }
 
-.plan-builder-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 1rem 0;
-}
-
-.plan-builder-header button {
-  margin: 0;
-}
 
 .chart button.disabled {
   background: darkred;
@@ -388,7 +330,7 @@ footer a:hover {
 
 footer > p {
   margin: 0.2rem 0;
-  max-width: 400px;
+  max-width: 33%;
 
   text-align: right;
   line-height: 1.5;
@@ -481,4 +423,13 @@ td {
   width: 20px;
   border-radius: 50%;
   display: inline-block;
+}
+.dtable{
+    width: 220px;
+}
+
+
+.leaflet-control-layers:before{ 
+    content:"Select a Map. Mouseover to view options."; 
+    color:#000 ;
 }

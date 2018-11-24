@@ -341,12 +341,13 @@
 	border-radius: 5px;
 	}
 .leaflet-control-layers-toggle {
-	background-image: url(images/layers.png);
+  background-color: #eaf3f6;
+  background-color: transparent;
 	width: 36px;
 	height: 36px;
+    content: "Mouseover";
 	}
 .leaflet-retina .leaflet-control-layers-toggle {
-	background-image: url(images/layers-2x.png);
 	background-size: 26px 26px;
 	}
 .leaflet-touch .leaflet-control-layers-toggle {

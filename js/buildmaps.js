@@ -85,8 +85,8 @@ function mousein(e){
 map = new L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1,
             crs : L.CRS.EPSG4326,
+            attributionControl: false,
         });
- map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
@@ -172,7 +172,7 @@ map = new L.map('map', {
 
         
         baseMaps = {"Geographic House":layer_Geo_h, "Hex House":layer_Hex_h, "Geographic Senate":layer_Geo_s, "Hex Senate":layer_Hex_s, "Geographic Congress":layer_Geo_c, "Hex Congress":layer_Hex_c};
-        control = new L.control.layers(baseMaps,{},{collapsed:false}).addTo(map);
+        control = new L.control.layers(baseMaps,{},{collapsed:true}).addTo(map);
         map.fitBounds(bounds_group.getBounds());
         setBounds();
 
@@ -194,9 +194,11 @@ var legend = L.control({position: 'bottomright'});
             labels.push(
                 '<i class="dot" style="background-color:' + legend_entries[i][1] + '"></i> ' +
            legend_entries[i][0]);
-
+            if (i != legend_entries.length -1){
+                labels.push('<br>');
+            }
         }
-        div.innerHTML = labels.join('<br>');
+        div.innerHTML = labels.join('');
     return div;
     };
     legend.addTo(map);

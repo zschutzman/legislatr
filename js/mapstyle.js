@@ -8,13 +8,13 @@ function nth(n){return[n+"st",n+"nd",n+"rd"][((n+90)%100-10)%10-1]||n+"th"}
 function popup_populate(feature, layer) {
     var popupContent = '<table>\
             <tr>\
-                <td style="white-space: nowrap" colspan="1"><h4>' + pane2reso[layer.options['pane']]  + ' District</h4><br />' + nth(parseInt(String(feature.properties['District']))) + '</td>\
+                <td style="white-space: nowrap" colspan="1"><h4>' + pane2reso[layer.options['pane']]  + ' District</h4>' + nth(parseInt(String(feature.properties['District']))) + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="1"><h4>Name of '+ pane2rep[layer.options['pane']] + '</h4><br />' + String(feature.properties['Name']) + '</td>\
+                <td style="white-space: nowrap" colspan="1"><h4>Name of '+ pane2rep[layer.options['pane']] + '</h4>' + String(feature.properties['Name']) + '</td>\
             </tr>\
             <tr>\
-                <td style="white-space: nowrap" colspan="1"><h4>Party</h4><br />' + String(feature.properties['Party']) + '</td>\
+                <td style="white-space: nowrap" colspan="1"><h4>Party</h4>' + String(feature.properties['Party']) + '</td>\
             </tr>\
         </table>';
     feature.properties['infostring'] = popupContent;
