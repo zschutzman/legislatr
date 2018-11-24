@@ -83,7 +83,6 @@ map = new L.map('map', {
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        var hash = new L.Hash(map);
         map.createPane('pane_Geo_House');       
         map.createPane('pane_Geo_Sen');
         map.createPane('pane_Geo_Cong');       
