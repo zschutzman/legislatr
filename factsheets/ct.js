@@ -1,7 +1,7 @@
         
 function fillfacts() {
 
-    var ct_facts = "<main><b><center>Connecticut has 5 Congressional districts, 36 State Senate districts, and 151 State House districts.</center></b>  <br /><h4> Rules and Requirements </h4><p> Connecticut's congressional districts must comply with federal equal population and contiguity requirements as well as the Voting Rights Act.  The State has no additional criteria for drawing its Congressional or Senate districts.  State House districts must be drawn so as to minimize the number of towns split across multiple districts.\
+    var ct_facts = "<main><h4> Rules and Requirements </h4><p> Connecticut's congressional districts must comply with federal equal population and contiguity requirements as well as the Voting Rights Act.  The State has no additional criteria for drawing its Congressional or Senate districts.  State House districts must be drawn so as to minimize the number of towns split across multiple districts.\
     </p>\
     <br />\
     <h4> Redistricting Process</h4> <p> Congressional and legislative districts are redrawn every ten years following the decennial U.S. Census.  Connecticut uses the same process to draw both its congressional and legislative districts. The legislature, appoints an eight member, bipartisan Reapportionent Committee which draws the new maps.  If the plans pass a two-thirds vote in both houses of the legislature, they are enacted.<br />\
