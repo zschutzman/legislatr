@@ -62,6 +62,7 @@ function styler(feature) {
         weight: 1.5  , 
         fill: true,
         fillOpacity: 1,
+        //fillPattern: stripes,
         fillColor: 'rgba(64,64,238,1.0)',
     }
             break;

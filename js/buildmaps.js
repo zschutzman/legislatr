@@ -8,6 +8,7 @@ var baseMaps;
 var basemaps2;
 var map;
 var map2;
+var stripes;
  
 var highlightLayer;
 var mouseLayer;
@@ -89,6 +90,8 @@ map = new L.map('map', {
             attributionControl: false,
         });
         var bounds_group = new L.featureGroup([]);
+        stripes = new L.StripePattern();
+        stripes.addTo(map);
         function setBounds() {
         }
         map.createPane('pane_Geo_House');       
