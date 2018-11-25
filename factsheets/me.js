@@ -3,9 +3,11 @@ function fillfacts() {
 
     var me_facts = `<main>\
     <h4>The Legislature </h4><p> Maine's state legislature is bicameral with a House of Representatives and a Senate.  Members of both houses are elected to two-year terms in even-numbered\
-    years.  Members may serve up to four consecutive terms in a particular house. </p>\
+    years.  Members may serve up to four consecutive terms in a particular house.</p>\
     <p> In the current legislative session, Democrats hold 21 of the 35 Senate seats, and Republicans hold 14.  In the House, Democrats hold 89 of the 151 seats, Republicans hold 57, and Independent and third-party candidates hold 5.  Both members of the delegation to the U.S.\
-    House of Representatives are Democrats.\
+    House of Representatives are Democrats.<br />\
+    Three Native American communities in Maine, the Passamaquoddy Nation, the Penobscot Nation, and the Houlton Band of Maliseets, are each entitled to elect a non-voting representative to the Maine State House.  While these members cannot cast floor votes, they can sponsor legislation related to Tribal issues\
+    as well as serve as voting members of committees.  The Penobscot and Passamaquoddy Nations withdrew their represenative in 2015 in protest, and the Penobscot representative has yet to return to the legislature.\
     </p><br />\
     <h4> Rules and Requirements </h4><p> \
     Maine's congressional districts must comply with federal equal population and contiguity requirements as well as the Voting Rights Act. \
