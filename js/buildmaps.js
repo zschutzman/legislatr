@@ -182,7 +182,7 @@ map = new L.map('map', {
 
 
         
-var legend = L.control({position: 'bottomright'});
+var legend = L.control({position: 'topright'});
     legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'leaflet-control');

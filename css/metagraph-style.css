@@ -433,6 +433,6 @@ td {
 
 
 .leaflet-control-layers:before{ 
-    content:"Select a Map. Mouseover to view options."; 
+    content:"Mouseover to view options."; 
     color:#000 ;
 }

@@ -359,14 +359,16 @@
 	display: none;
 	}
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
-	display: block;
+	display: inline;
 	position: relative;
+	border: 0px;
 	}
 .leaflet-control-layers-expanded {
 	padding: 6px 10px 6px 6px;
 	color: #333;
   background: #eaf3f6;
   background: transparent;
+  border: 0px;
 	}
 .leaflet-control-layers-scrollbar {
 	overflow-y: scroll;
@@ -379,7 +381,8 @@
 	top: 1px;
 	}
 .leaflet-control-layers label {
-	display: block;
+	display: inline-block;
+	width: 50%;
 	}
 .leaflet-control-layers-separator {
 	height: 0;
