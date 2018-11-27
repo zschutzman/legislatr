@@ -88,6 +88,7 @@ map = new L.map('map', {
             crs : L.CRS.EPSG3857,
             zoom: 10,
             attributionControl: false,
+            zoomSnap:.5
         });
         var bounds_group = new L.featureGroup([]);
         stripes = new L.StripePattern();

@@ -394,7 +394,7 @@ table#district_table {
     border-spacing: 5px;
     border: 1px black solid;
     text-align: center;
-    max-width: 250px;
+    width: 250px;
     border-collapse: collapse;
 
 }
@@ -442,9 +442,7 @@ table#district_table td {
   border-radius: 50%;
   display: inline-block;
 }
-.dtable{
-    width: 220px;
-}
+
 
 
 .leaflet-control-layers:before{ 
