@@ -390,17 +390,32 @@ nav {
 
 
 
-table {
+table#district_table {
     border-spacing: 5px;
     border: 1px black solid;
     text-align: center;
-    width: 250px;
+    max-width: 250px;
+    border-collapse: collapse;
+
 }
 
-td { 
+table#district_table tr { 
   border: solid;
   border-width: 1px 0;
   border-top: none;
+  max-width: 250px;
+  
+}
+table#district_table tr.last { 
+  border-bottom: none;
+  
+}
+
+table#district_table td { 
+  border: solid;
+  border-width: 1px 0;
+  border-top: none;
+  max-width: 250px;
   
 }
 
@@ -436,3 +451,35 @@ td {
     content:"Mouseover to view options."; 
     color:#000 ;
 }
+
+table#fast_facts {
+    border-spacing: 5px;
+    border: 1px black solid;
+    text-align: center;
+    max-width: 350px;
+    border-collapse: collapse;
+
+}
+
+table#fast_facts tr.last { 
+  border-bottom: none;
+  
+}
+
+table#fast_facts td { 
+  border: solid;
+  border-width: 1px 0;
+  border-top: none;
+  max-width: 250px;
+  
+}
+
+#fast_facts td:first-child {
+  font-weight: bold
+}
+
+
+#fast_facts th {
+  text-align: center;
+}
+

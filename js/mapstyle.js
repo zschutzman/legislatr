@@ -12,9 +12,20 @@ function toTitleCase(str) {
 }
 
 
+function replaceNbsps(str) {
+  var re = new RegExp(String.fromCharCode(160), "g");
+  return str.replace(re, " ");
+}
+
+
+String.prototype.replaceAll = function(search, replacement) {
+  var target = this;
+  return target.split(search).join(replacement);
+};
+
 
 function popup_populate(feature, layer) {
-    content = ['<table>'];
+    content = ['<table id="district_table">'];
     
         
      content.push(
@@ -42,6 +53,8 @@ function popup_populate(feature, layer) {
     }
     content.push('</table>');
     content = content.join('');
+
+    content = replaceNbsps(content);
    
     feature.properties['infostring'] = content;
             layer.on({
