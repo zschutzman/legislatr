@@ -18,8 +18,8 @@ function fillfacts() {
     </p>\
     <br />\
     <h4> Redistricting Process</h4> <p> Congressional and legislative districts are redrawn every ten years following the decennial U.S. Census. \
-Maine uses the same process to draw both its congressional and legislative districts. The legislature appoints a bipartisan commission consisting of ten of its own members, the two State Party chairs, and three members \
-of the public.  This comission recommends a set of plans to the legislature, which must enact them with a two-thirds majority in each house, subject to approval by the Governor.<br />\
+    Maine uses the same process to draw both its congressional and legislative districts. The legislature appoints a bipartisan commission consisting of ten of its own members, the two State Party chairs, and three members \
+    of the public.  This comission recommends a set of plans to the legislature, which must enact them with a two-thirds majority in each house, subject to approval by the Governor.<br />\
     If this process fails to result in the adoption of a districting plan at some level, the Supreme Judicial Court has the responsibility and power to enact a plan, subject to all of the same rules and requirements.\
     </p>\
     <br />\

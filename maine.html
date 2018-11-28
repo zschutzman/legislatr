@@ -14,8 +14,10 @@
 	
 	<link rel="stylesheet" href="css/metagraph-style.css">
 	<script src="js/buildmaps.js"></script>
+	<script src="js/map-highlight.js"></script>
 	<script src="js/leaflet-src.js"></script>
-	<script src="js/mapstyle.js"></script>       
+	<script src="js/mapstyle.js"></script>
+	<script src="js/table-populate.js"></script>
 	<script src="js/leaflet.pattern.js"></script>       
 
 
@@ -24,79 +26,78 @@
 
 		Warn: Nebraska has a unicameral legislature,
 			  so it has no _SLDLST_ file.
-	-->
-	<script src="data/23_SLDUST_geo.js"></script>
-	<script src="data/23_SLDUST_hex.js"></script>
-	<script src="data/23_SLDLST_geo.js"></script>
-	<script src="data/23_SLDLST_hex.js"></script>
-	<script src="data/23_CD115FP_geo.js"></script>
-	<script src="data/23_CD115FP_hex.js"></script>
-	<script src="factsheets/me.js"></script>
+			-->
+			<script src="data/23_SLDUST_geo.js"></script>
+			<script src="data/23_SLDUST_hex.js"></script>
+			<script src="data/23_SLDLST_geo.js"></script>
+			<script src="data/23_SLDLST_hex.js"></script>
+			<script src="data/23_CD115FP_geo.js"></script>
+			<script src="data/23_CD115FP_hex.js"></script>
+			<script src="factsheets/me.js"></script>
 
 
-	<title>Maine</title>        
+			<title>Maine</title>        
 
 
-</head>
+		</head>
 
+		<body>
+			<header><h1>Maine</h1><b>Maine has 2 Congressional districts, 35 State Senate districts, and 151 State House districts.</center></b>  </header>
 
-<body>
-		<header><h1>Maine</h1><b>Maine has 2 Congressional districts, 35 State Senate districts, and 151 State House districts.</center></b>  </header>
+			<div id="chart1" class="chart two-columns">
 
-	<div id="chart1" class="chart two-columns">
-
-		<div>
-			<div id="map" class="map" style="opacity:0%">
-			</div>
-		</div>
-		<div>
-			<div id='districtTable' class = "dtable">
-				<table>
-					<tr>
-						<td style="white-space: nowrap" colspan="1"><h4>Click a district to see its info</h4><br />
-						</tr>
-					</table>        
+				<div>
+					<div id="map" class="map" style="opacity:0%">
+					</div>
 				</div>
-			</div>
-		</div>
-			<div>
-				<div id="facts"></div>
-			</div>
-	
-	<div id="instructions">
-		<main>
-			<h3> About this tool </h3>
+				<div>
+					<div id='districtTable' class = "dtable">
+						<table>
+							<tr>
+								<td style="white-space: nowrap" colspan="1"><h4>Click a district to see its info</h4><br />
+								</tr>
+							</table>        
+						</div>
+					</div>
+				</div>
+				<div>
+					<div id="facts"></div>
+				</div>
 
-			<p>
-				Use this interactive map to explore the current districting plans in Maine for the U.S House of Representatives as well as both houses of the state's legislature, the State House of Representatives and the State Senate.  Clicking on a district will provide additional details about it.  Use the geographic maps to see an accurate picture of what the districts look like.  The hexagonal cartograms represent each district with a single hexagon, all of the same size.  This gives a good visualization of the partisan breakdown of the various legislative delegations.
-			</p>
-		</main>
-	</div>
+				<div id="instructions">
+					<main>
+						<h3> About this tool </h3>
 
-	<script>   
+						<p>
+							Use this interactive map to explore the current districting plans in Maine for the U.S House of Representatives as well as both houses of the state's legislature, the State House of Representatives and the State Senate.  Clicking on a district will provide additional details about it.  Use the geographic maps to see an accurate picture of what the districts look like.  The hexagonal cartograms represent each district with a single hexagon, all of the same size.  This gives a good visualization of the partisan breakdown of the various legislative delegations.
+						</p>
+					</main>
+				</div>
+
+				<script>   
 		buildmap([["Democrat","#4040ee"],["Republican","#ee4040"],["Independent/Third-Party","#eeee40"]]);//call this with a dictionary with pairs {LABEL NAME: COLOR}
 		fillfacts();
 	</script>
 
 </body>
 
-  <footer>
-    <p>
-      This page was created by <a href="http://zachschutzman.com/"><b>Zachary Schutzman</b></a>
-      based on work at the
-      <a href="http://gerrydata.org">Voting Rights Data Institute</a>,
-      and is being edited and maintained by MGGG. 
-  </p><p>
-      The project extends work done by
-      Ethan Ackerman, Zach Levitt, Andrew Medeiros, Mack Meller, 
-      Onuoha Odim, Sherlock Ortiz, Sarita Rosenstock, and Kaki Ryan.
-    </p>
+<footer>
+	<p>
+		This page was created by <a href="http://zachschutzman.com/"><b>Zachary Schutzman</b></a>
+		based on work at the
+		<a href="http://gerrydata.org">Voting Rights Data Institute</a>,
+		and is being edited and maintained by MGGG. 
+	</p><p>
+		The project extends work done by
+		Ethan Ackerman, Zach Levitt, Andrew Medeiros, Mack Meller, 
+		Onuoha Odim, Sherlock Ortiz, Sarita Rosenstock, and Kaki Ryan.
+	</p>
 
-    <p>
-    	These maps were made using <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> 
-    	and use <a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> as a template.
-    </p>
-  </footer>
+	<p>
+		These maps were made using <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> 
+		and use <a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> as a template.
+	</p>
+</footer>
 
 
 

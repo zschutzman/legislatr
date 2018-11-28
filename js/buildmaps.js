@@ -9,121 +9,53 @@ var basemaps2;
 var map;
 var map2;
 var stripes;
- 
-var highlightLayer;
-var mouseLayer;
-var highlightchar;
 
-function highlightFeature(e) {
-    //highlightLayer = e.target;
 
-    
-    if (highlightLayer) {
-        for (i in e.target._eventParents) {
-            
-            e.target._eventParents[i].resetStyle(highlightLayer);
-        }
+
+
+function buildmap(legend_entries){
+
+    map = new L.map('map', {
+        zoomControl:true, maxZoom:28, minZoom:1,
+        crs : L.CRS.EPSG3857,
+        zoom: 10,
+        attributionControl: false,
+        zoomSnap:.5
+    });
+    var bounds_group = new L.featureGroup([]);
+    stripes = new L.StripePattern();
+    stripes.addTo(map);
+    function setBounds() {
     }
-    if (highlightLayer == e.target){
-     highlightLayer = false;
-     return;
-    }
-    highlightLayer = e.target;    
-    
-    document.getElementById('districtTable').innerHTML = highlightLayer.feature.properties['infostring'];
-
-    
-    highlightchar = String(highlightLayer.feature.properties['Party']).charAt();
-    if (highlightchar == 'D'){ highlightchar = "#9999e0";}
-    else if (highlightchar == 'R'){ highlightchar = "#e09999";}
-    else { highlightchar = "#e0e099";}
-    if (e.target.feature.geometry.type === 'LineString') {
-        highlightLayer.setStyle({
-        color: highlightchar,
-        });
-    } else {
-        highlightLayer.setStyle({
-        fillColor: highlightchar,
-        fillOpacity: 1
-        });
-    }
-}
-
-function mousein(e){
-    
-        if (mouseLayer) {
-        for (i in e.target._eventParents) {
-            
-            e.target._eventParents[i].setStyle({weight: 1.5,});;
-        }
-    }
-    
-    
-    
-    mouseLayer = e.target;
-
-    if (e.target.feature.geometry.type === 'LineString') {
-        mouseLayer.setStyle({
-        weight: 5,
-
-        });
-    } else {
-        mouseLayer.setStyle({
-        weight: 5,
-
-        });
-    }
-}
-
- 
- 
- function buildmap(legend_entries){
+    map.createPane('pane_Geo_House');       
+    map.createPane('pane_Geo_Sen');
+    map.createPane('pane_Geo_Cong');       
+    map.createPane('pane_Hex_House');
+    map.createPane('pane_Hex_Sen');       
+    map.createPane('pane_Hex_Cong');
 
 
+    map.getPane('pane_Geo_House').style.zIndex = 400;
+    map.getPane('pane_Geo_House').style['mix-blend-mode'] = 'normal';
+    layer_Geo_h = new L.geoJson(json_Geo_h, {
+        attribution: '',
+        pane: 'pane_Geo_House',
+        onEachFeature: popup_populate,
+        style: styler,
+    });
+    bounds_group.addLayer(layer_Geo_h);
+    map.addLayer(layer_Geo_h);
 
 
-
-map = new L.map('map', {
-            zoomControl:true, maxZoom:28, minZoom:1,
-            crs : L.CRS.EPSG3857,
-            zoom: 10,
-            attributionControl: false,
-            zoomSnap:.5
-        });
-        var bounds_group = new L.featureGroup([]);
-        stripes = new L.StripePattern();
-        stripes.addTo(map);
-        function setBounds() {
-        }
-        map.createPane('pane_Geo_House');       
-        map.createPane('pane_Geo_Sen');
-        map.createPane('pane_Geo_Cong');       
-        map.createPane('pane_Hex_House');
-        map.createPane('pane_Hex_Sen');       
-        map.createPane('pane_Hex_Cong');
-        
-        
-        map.getPane('pane_Geo_House').style.zIndex = 400;
-        map.getPane('pane_Geo_House').style['mix-blend-mode'] = 'normal';
-        layer_Geo_h = new L.geoJson(json_Geo_h, {
-            attribution: '',
-            pane: 'pane_Geo_House',
-            onEachFeature: popup_populate,
-            style: styler,
-        });
-        bounds_group.addLayer(layer_Geo_h);
-        map.addLayer(layer_Geo_h);
-
-
-        map.getPane('pane_Geo_Sen').style.zIndex = 401;
-        map.getPane('pane_Geo_Sen').style['mix-blend-mode'] = 'normal';
-        layer_Geo_s = new L.geoJson(json_Geo_s, {
-            attribution: '',
-            pane: 'pane_Geo_Sen',
-            onEachFeature: popup_populate,
-            style: styler,
-        });
-        bounds_group.addLayer(layer_Geo_s);
+    map.getPane('pane_Geo_Sen').style.zIndex = 401;
+    map.getPane('pane_Geo_Sen').style['mix-blend-mode'] = 'normal';
+    layer_Geo_s = new L.geoJson(json_Geo_s, {
+        attribution: '',
+        pane: 'pane_Geo_Sen',
+        onEachFeature: popup_populate,
+        style: styler,
+    });
+    bounds_group.addLayer(layer_Geo_s);
         //map.addLayer(layer_Geo_s);
 
         map.getPane('pane_Geo_Cong').style.zIndex = 401;
@@ -136,7 +68,7 @@ map = new L.map('map', {
         });
         bounds_group.addLayer(layer_Geo_c);
         //map.addLayer(layer_Geo_c);           
- 
+
         
         
         map.getPane('pane_Hex_House').style.zIndex = 401;
@@ -186,25 +118,25 @@ map = new L.map('map', {
 
 
         
-var legend = L.control({position: 'topright'});
-    legend.onAdd = function (map) {
+        var legend = L.control({position: 'topright'});
+        legend.onAdd = function (map) {
 
-    var div = L.DomUtil.create('div', 'leaflet-control');
-    labels = ['<h4>Legend</h4>'];
-    
-        
-    for (var i = 0; i < legend_entries.length; i++) {
+            var div = L.DomUtil.create('div', 'leaflet-control');
+            labels = ['<h4>Legend</h4>'];
 
-            div.innerHTML += 
-            labels.push(
-                '<i class="dot" style="background-color:' + legend_entries[i][1] + '"></i> ' +
-           legend_entries[i][0]);
-            if (i != legend_entries.length -1){
-                labels.push('<br>');
+
+            for (var i = 0; i < legend_entries.length; i++) {
+
+                div.innerHTML += 
+                labels.push(
+                    '<i class="dot" style="background-color:' + legend_entries[i][1] + '"></i> ' +
+                    legend_entries[i][0]);
+                if (i != legend_entries.length -1){
+                    labels.push('<br>');
+                }
             }
-        }
-        div.innerHTML = labels.join('');
-    return div;
-    };
-    legend.addTo(map);
- }
+            div.innerHTML = labels.join('');
+            return div;
+        };
+        legend.addTo(map);
+    }

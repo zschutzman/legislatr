@@ -14,8 +14,11 @@
 	
 	<link rel="stylesheet" href="css/metagraph-style.css">
 	<script src="js/buildmaps.js"></script>
+	<script src="js/map-highlight.js"></script>
 	<script src="js/leaflet-src.js"></script>
-	<script src="js/mapstyle.js"></script>       
+	<script src="js/mapstyle.js"></script>
+	<script src="js/table-populate.js"></script>
+	
 	<script src="js/leaflet.pattern.js"></script>       
 
 
@@ -61,80 +64,80 @@
 					<div>
 						<div" class="factsheet">
 
-							<table id="fast_facts">
-								<thead>
-									<tr>
-										<th colspan="2">Quick Facts</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Contiguity</td>
-										<td>Yes</td>
-									</tr>
-									<tr>
-										<td>Equal Population</td>
-										<td>Yes</td>
-									</tr>
-									<tr>
-										<td>Compactness</td>
-										<td>No</td>
-									</tr>
-									<tr>
-										<td>Preserve Political Boundaries</td>
-											<td>Only for State House districts</td>
-										</td>
-									</tr>
-									<tr>
-										<td>Attention to Communities-of-Interest</td>
-										<td>No</td>
-									</tr>
-									<tr>
-										<td>Prohibit Partisan- or Incumbency-Based Favoritism</td>
-										<td>No</td>
-									</tr>
-									<tr>
-										<td>Who Decides?</td>
-											<td>State Legislature, otherwise State Supreme Court</td>									
-										</tr>
-									</tbody>
-								</table>
+						<table id="fast_facts">
+							<thead>
+								<tr>
+									<th colspan="2">Quick Facts</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Contiguity</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td>Equal Population</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td>Compactness</td>
+									<td>No</td>
+								</tr>
+								<tr>
+									<td>Preserve Political Boundaries</td>
+									<td>Only for State House districts</td>
+								</td>
+							</tr>
+							<tr>
+								<td>Attention to Communities-of-Interest</td>
+								<td>No</td>
+							</tr>
+							<tr>
+								<td>Prohibit Partisan- or Incumbency-Based Favoritism</td>
+								<td>No</td>
+							</tr>
+							<tr>
+								<td>Who Decides?</td>
+								<td>State Legislature, otherwise State Supreme Court</td>									
+							</tr>
+						</tbody>
+					</table>
 
 
 
 
-							</div>
-						</div>
-					</div>
+				</div>
+			</div>
+		</div>
 
 
 
 
-					<div id="facts"></div>
-
-
-
-
-
-					<div id="instructions">
-						<main>
-							<h3> About this tool </h3>
-
-							<p>
-								Use this interactive map to explore the current districting plans in Connecticut for the U.S House of Representatives as well as both houses of the state's General Assembly, the State House of Representatives and the State Senate.  Clicking on a district will provide additional details about it.  Use the geographic maps to see an accurate picture of what the districts look like.  The hexagonal cartograms represent each district with a single hexagon, all of the same size.  This gives a good visualization of the partisan breakdown of the various legislative delegations.
-							</p>
-						</main>
-					</div>
+		<div id="facts"></div>
 
 
 
 
 
+		<div id="instructions">
+			<main>
+				<h3> About this tool </h3>
+
+				<p>
+					Use this interactive map to explore the current districting plans in Connecticut for the U.S House of Representatives as well as both houses of the state's General Assembly, the State House of Representatives and the State Senate.  Clicking on a district will provide additional details about it.  Use the geographic maps to see an accurate picture of what the districts look like.  The hexagonal cartograms represent each district with a single hexagon, all of the same size.  This gives a good visualization of the partisan breakdown of the various legislative delegations.
+				</p>
+			</main>
+		</div>
 
 
 
 
-					<script>   
+
+
+
+
+
+		<script>   
 		buildmap([["Democrat","#4040ee"],["Republican","#ee4040"]]);//call this with a dictionary with pairs {LABEL NAME: COLOR}
 		fillfacts();
 	</script>
