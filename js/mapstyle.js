@@ -1,7 +1,6 @@
 
 
 function styler_geo(feature) {
-    console.log(feature);
     switch(String(feature.properties['Party']).charAt()) {
         case 'D':
         return {
