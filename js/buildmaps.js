@@ -22,11 +22,13 @@ function buildmap(legend_entries){
         attributionControl: false,
         zoomSnap:.25,
         zoomDelta: .25,
+        maxBoundsViscosity: 1.0,
     });
     var bounds_group = new L.featureGroup([]);
     stripes = new L.StripePattern();
     stripes.addTo(map);
-    function setBounds() {
+    function setBounds(b) {
+        map.options.maxBounds = b;
     }
     map.createPane('pane_Geo_House');       
     map.createPane('pane_Geo_Sen');
@@ -128,7 +130,7 @@ var layer_tile = L.tileLayer(mapboxUrl, {pane: "pane_Geo_House",id: 'mapbox.ligh
         baseMaps = {"Geographic House":grp_house, "Hex House":layer_Hex_h, "Geographic Senate":grp_sen, "Hex Senate":layer_Hex_s, "Geographic Congress":grp_cong, "Hex Congress":layer_Hex_c};
         control = new L.control.layers(baseMaps,{},{collapsed:true, position:'bottomleft'}).addTo(map);
         map.fitBounds(bounds_group.getBounds());
-        setBounds();
+        setBounds(bounds_group.getBounds());
 
 
 
