@@ -9,7 +9,7 @@ function styler_geo(feature) {
             dashArray: '',
             lineCap: 'butt',
             lineJoin: 'miter',
-            weight: .2  , 
+            weight: .5  , 
             fill: true,
             fillOpacity: .5,
         //fillPattern: stripes,
@@ -24,7 +24,7 @@ function styler_geo(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: .2  , 
+        weight: .5  , 
         fill: true,
         fillOpacity: .5,
         fillColor: 'rgba(238,64,64,1.0)',
@@ -37,7 +37,7 @@ function styler_geo(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: .2  , 
+        weight: .5  , 
         fill: true,
         fillOpacity: .5,
         fillColor: 'rgba(238,238,64,1.0)',
@@ -48,7 +48,6 @@ function styler_geo(feature) {
 
 
 function styler_hex(feature) {
-    console.log(feature);
     switch(String(feature.properties['Party']).charAt()) {
         case 'D':
         return {
@@ -57,7 +56,7 @@ function styler_hex(feature) {
             dashArray: '',
             lineCap: 'butt',
             lineJoin: 'miter',
-            weight: 1.5  , 
+            weight: 2.5  , 
             fill: true,
             fillOpacity: 1,
         //fillPattern: stripes,
@@ -72,7 +71,7 @@ function styler_hex(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: 1.5  , 
+        weight: 2.5  , 
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(238,64,64,1.0)',
@@ -85,7 +84,7 @@ function styler_hex(feature) {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: 1.5  , 
+        weight: 2.5  , 
         fill: true,
         fillOpacity: 1,
         fillColor: 'rgba(238,238,64,1.0)',

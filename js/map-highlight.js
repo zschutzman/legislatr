@@ -1,23 +1,24 @@
 var highlightLayer;
 var mouseLayer;
 var highlightchar;
-
+var maptype;
 function highlightFeature(e) {
     //highlightLayer = e.target;
 
     
     if (highlightLayer) {
-        for (i in e.target._eventParents) {
-            
-            e.target._eventParents[i].resetStyle(highlightLayer);
-        }
+      maptype = highlightLayer.getPane().getAttribute("class").substr(26,3);
+      for (i in e.target._eventParents) {
+
+        e.target._eventParents[i].resetStyle(highlightLayer);
+      }
     }
     if (highlightLayer == e.target){
-       highlightLayer = false;
-       return;
+     highlightLayer = false;
+     return;
    }
    highlightLayer = e.target;    
-   
+   maptype = highlightLayer.getPane().getAttribute("class").substr(26,3);
    document.getElementById('districtTable').innerHTML = highlightLayer.feature.properties['infostring'];
 
    
@@ -27,38 +28,39 @@ function highlightFeature(e) {
    else { highlightchar = "#e0e099";}
    if (e.target.feature.geometry.type === 'LineString') {
     highlightLayer.setStyle({
-        color: highlightchar,
+      color: highlightchar,
     });
-} else {
+  } else {
     highlightLayer.setStyle({
-        fillColor: highlightchar,
+      fillColor: highlightchar,
         //fillOpacity: 1
-    });
-}
+      });
+  }
 }
 
 function mousein(e){
-    
-    if (mouseLayer) {
-        for (i in e.target._eventParents) {
-            
-            e.target._eventParents[i].setStyle({weight: 1.5,});;
-        }
+
+  if (mouseLayer) {
+    maptype = mouseLayer.options.pane.substr(5,3);
+    for (i in e.target._eventParents) {
+
+      e.target._eventParents[i].setStyle({weight: maptype == "Geo" ? .5:2.5,});;
     }
-    
-    
-    
-    mouseLayer = e.target;
+  }
 
-    if (e.target.feature.geometry.type === 'LineString') {
-        mouseLayer.setStyle({
-            weight: 5,
 
-        });
-    } else {
-        mouseLayer.setStyle({
-            weight: 5,
 
-        });
-    }
+  mouseLayer = e.target;
+  maptype = mouseLayer.options.pane.substr(5,3);
+  if (e.target.feature.geometry.type === 'LineString') {
+    mouseLayer.setStyle({
+      weight: 5,
+
+    });
+  } else {
+    mouseLayer.setStyle({
+      weight: 5,
+
+    });
+  }
 }
