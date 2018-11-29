@@ -41,10 +41,23 @@ function buildmap(legend_entries){
         attribution: '',
         pane: 'pane_Geo_House',
         onEachFeature: popup_populate,
-        style: styler,
+        style: styler_geo,
     });
     bounds_group.addLayer(layer_Geo_h);
-    map.addLayer(layer_Geo_h);
+        //map.addLayer(layer_Hex_c);        
+     
+var mapboxUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
+var accessToken = 'pk.eyJ1IjoienNjaHV0em1hbiIsImEiOiJjanAyenN4OTUwY3JhM3dsbndkNnNpYTR3In0.NTCzG2kg5DjLkx8zI7bT3Q';
+
+var layer_tile = L.tileLayer(mapboxUrl, {pane: "pane_Geo_House",id: 'mapbox.light', attribution: '', maxZoom: 28, accessToken: accessToken}).addTo(map);
+
+    //  var layer_Geo_h = L.tileLayer.mbTiles('https://zachschutzman.com/legislatr/tiles/'+stateFP+'.mbtiles',{
+    //     pane: 'pane_Geo_House',
+    //     minZoom: 1,
+    //     maxZoom: 28,
+    //     zoom: 10,
+    // }).addTo(map);
+     //bounds_group.addLayer(layer_Geo_h);
 
 
     map.getPane('pane_Geo_Sen').style.zIndex = 401;
@@ -53,7 +66,7 @@ function buildmap(legend_entries){
         attribution: '',
         pane: 'pane_Geo_Sen',
         onEachFeature: popup_populate,
-        style: styler,
+        style: styler_geo,
     });
     bounds_group.addLayer(layer_Geo_s);
         //map.addLayer(layer_Geo_s);
@@ -64,7 +77,7 @@ function buildmap(legend_entries){
             attribution: '',
             pane: 'pane_Geo_Cong',
             onEachFeature: popup_populate,
-            style: styler,
+            style: styler_geo,
         });
         bounds_group.addLayer(layer_Geo_c);
         //map.addLayer(layer_Geo_c);           
@@ -77,7 +90,7 @@ function buildmap(legend_entries){
             attribution: '',
             pane: 'pane_Hex_House',
             onEachFeature: popup_populate,
-            style: styler,
+            style: styler_hex,
         });
         bounds_group.addLayer(layer_Hex_h);
         //map.addLayer(layer_Hex_h);
@@ -89,7 +102,7 @@ function buildmap(legend_entries){
             attribution: '',
             pane: 'pane_Hex_Sen',
             onEachFeature: popup_populate,
-            style: styler,
+            style: styler_hex,
         });
         bounds_group.addLayer(layer_Hex_s);
         //map.addLayer(layer_Hex_s);
@@ -100,15 +113,18 @@ function buildmap(legend_entries){
             attribution: '',
             pane: 'pane_Hex_Cong',
             onEachFeature: popup_populate,
-            style: styler,
+            style: styler_hex,
         });
         bounds_group.addLayer(layer_Hex_c);
-        //map.addLayer(layer_Hex_c);        
-        
-        
 
         
-        baseMaps = {"Geographic House":layer_Geo_h, "Hex House":layer_Hex_h, "Geographic Senate":layer_Geo_s, "Hex Senate":layer_Hex_s, "Geographic Congress":layer_Geo_c, "Hex Congress":layer_Hex_c};
+        var grp_house = L.layerGroup([layer_Geo_h,layer_tile]);
+        var grp_sen = L.layerGroup([layer_Geo_s,layer_tile]);
+        var grp_cong = L.layerGroup([layer_Geo_c,layer_tile]);
+
+        grp_house.addTo(map);
+        
+        baseMaps = {"Geographic House":grp_house, "Hex House":layer_Hex_h, "Geographic Senate":grp_sen, "Hex Senate":layer_Hex_s, "Geographic Congress":grp_cong, "Hex Congress":layer_Hex_c};
         control = new L.control.layers(baseMaps,{},{collapsed:true, position:'bottomleft'}).addTo(map);
         map.fitBounds(bounds_group.getBounds());
         setBounds();

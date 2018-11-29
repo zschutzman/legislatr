@@ -32,7 +32,7 @@ function highlightFeature(e) {
 } else {
     highlightLayer.setStyle({
         fillColor: highlightchar,
-        fillOpacity: 1
+        //fillOpacity: 1
     });
 }
 }
