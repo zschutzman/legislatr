@@ -64,3 +64,23 @@ function mousein(e){
     });
   }
 }
+
+
+function mouseout(e){
+
+
+
+  mouseLayer = e.target;
+  maptype = mouseLayer.options.pane.substr(5,3);
+  if (e.target.feature.geometry.type === 'LineString') {
+    mouseLayer.setStyle({
+      weight: maptype == "Geo" ? .5:2.5,
+
+    });
+  } else {
+    mouseLayer.setStyle({
+      weight: maptype == "Geo" ? .5:2.5,
+
+    });
+  }
+}
