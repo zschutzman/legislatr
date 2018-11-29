@@ -5313,6 +5313,7 @@ var Zoom = Control.extend({
 	},
 
 	_zoomIn: function (e) {
+		console.log(this._map.options.zoomDelta);
 		if (!this._disabled && this._map._zoom < this._map.getMaxZoom()) {
 			this._map.zoomIn(this._map.options.zoomDelta * (e.shiftKey ? 3 : 1));
 		}

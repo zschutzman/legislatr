@@ -16,11 +16,12 @@ var stripes;
 function buildmap(legend_entries){
 
     map = new L.map('map', {
-        zoomControl:true, maxZoom:28, minZoom:1,
+        zoomControl:true, maxZoom:28, minZoom:3,
         crs : L.CRS.EPSG3857,
         zoom: 10,
         attributionControl: false,
-        zoomSnap:.5
+        zoomSnap:.25,
+        zoomDelta: .25,
     });
     var bounds_group = new L.featureGroup([]);
     stripes = new L.StripePattern();
