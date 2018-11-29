@@ -336,13 +336,11 @@
 
 .leaflet-control-layers {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
-  background: #eaf3f6;
-  background: transparent;
+  background-color: rgba(64, 64, 64, 0.3);
 	border-radius: 5px;
 	}
 .leaflet-control-layers-toggle {
-  background-color: #eaf3f6;
-  background-color: transparent;
+  /*background-color: rgba(64, 64, 64, 0.3);*/
 	width: 36px;
 	height: 36px;
     content: "Mouseover";
@@ -365,9 +363,8 @@
 	}
 .leaflet-control-layers-expanded {
 	padding: 6px 10px 6px 6px;
-	color: #333;
-  background: #eaf3f6;
-  background: transparent;
+	color: #000;
+  background-color: rgba(64, 64, 64, 0.3);
   border: 0px;
 	}
 .leaflet-control-layers-scrollbar {
