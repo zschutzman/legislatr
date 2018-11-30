@@ -10,13 +10,19 @@ var map;
 var map2;
 var stripes;
 
+var myStyle = {
+    "color": "#ff7800",
+    "weight": 5,
+    "opacity": 0.65
+};
+
 var geojsonMarkerOptions = {
     radius: 8,
-    fillColor: "#000000",
+    fillColor: "#ff7800",
     color: "#000",
     weight: 1,
     opacity: 1,
-    fillOpacity: 1,
+    fillOpacity: 0.8
 };
 
 
@@ -60,7 +66,9 @@ var mapboxUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_tok
 var accessToken = 'pk.eyJ1IjoienNjaHV0em1hbiIsImEiOiJjanAyenN4OTUwY3JhM3dsbndkNnNpYTR3In0.NTCzG2kg5DjLkx8zI7bT3Q';
 
 var layer_tile = L.tileLayer(mapboxUrl, {pane: "pane_Geo_House",id: 'mapbox.light', attribution: '', maxZoom: 28, accessToken: accessToken}).addTo(map);
-var layer_cities = L.geoJson(json_cities ).addTo(map);
+var layer_cities = L.geoJson(json_cities, {pane: "pane_Geo_House", pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    }, style: myStyle} ).addTo(map);
 
     //  var layer_Geo_h = L.tileLayer.mbTiles('https://zachschutzman.com/legislatr/tiles/'+stateFP+'.mbtiles',{
     //     pane: 'pane_Geo_House',
@@ -129,9 +137,9 @@ var layer_cities = L.geoJson(json_cities ).addTo(map);
         bounds_group.addLayer(layer_Hex_c);
 
         
-        var grp_house = L.layerGroup([layer_Geo_h,layer_tile,layer_cities]);
-        var grp_sen = L.layerGroup([layer_Geo_s,layer_tile, layer_cities]);
-        var grp_cong = L.layerGroup([layer_Geo_c,layer_tile,layer_cities]);
+        var grp_house = L.layerGroup([layer_cities,layer_Geo_h,layer_tile]);
+        var grp_sen = L.layerGroup([layer_cities,layer_Geo_s,layer_tile]);
+        var grp_cong = L.layerGroup([layer_cities,layer_Geo_c,layer_tile]);
 
         grp_house.addTo(map);
         
