@@ -29,7 +29,7 @@ var geojsonMarkerOptions = {
 function buildmap(legend_entries){
 
     map = new L.map('map', {
-        zoomControl:true, maxZoom:28, minZoom:3,
+        zoomControl:true, maxZoom:28, minZoom:4.5,
         crs : L.CRS.EPSG3857,
         zoom: 10,
         attributionControl: false,
@@ -65,7 +65,7 @@ function buildmap(legend_entries){
 var mapboxUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
 var accessToken = 'pk.eyJ1IjoienNjaHV0em1hbiIsImEiOiJjanAyenN4OTUwY3JhM3dsbndkNnNpYTR3In0.NTCzG2kg5DjLkx8zI7bT3Q';
 
-var layer_tile = L.tileLayer(mapboxUrl, {pane: "pane_Geo_House",id: 'mapbox.light', attribution: '', maxZoom: 28, accessToken: accessToken}).addTo(map);
+var layer_tile = L.tileLayer(mapboxUrl, {pane: "pane_Geo_House",id: "mapbox.light", attribution: '', maxZoom: 28, accessToken: accessToken}).addTo(map);
 var layer_cities = L.geoJson(json_cities, {pane: "pane_Geo_House", pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     }, style: myStyle} ).addTo(map);

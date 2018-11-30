@@ -4,7 +4,7 @@ function styler_geo(feature) {
     switch(String(feature.properties['Party']).charAt()) {
         case 'D':
         return {
-            opacity: 1,
+            opacity: .5,
             color: 'rgba(35,35,35,1.0)',
             dashArray: '',
             lineCap: 'butt',
@@ -19,7 +19,7 @@ function styler_geo(feature) {
 
     case 'R':
     return {
-        opacity: 1,
+        opacity: .5,
         color: 'rgba(35,35,35,1.0)',
         dashArray: '',
         lineCap: 'butt',
@@ -32,7 +32,7 @@ function styler_geo(feature) {
     break;
     default:
     return {
-        opacity: 1,
+        opacity: .5,
         color: 'rgba(35,35,35,1.0)',
         dashArray: '',
         lineCap: 'butt',
