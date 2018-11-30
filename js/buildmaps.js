@@ -62,10 +62,10 @@ function buildmap(legend_entries){
     bounds_group.addLayer(layer_Geo_h);
         //map.addLayer(layer_Hex_c);        
      
-var mapboxUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
+var mapboxUrl = 'https://api.mapbox.com/styles/v1/zschutzman/cjp4fdxmo0uv62spdtehzites/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}';//'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
 var accessToken = 'pk.eyJ1IjoienNjaHV0em1hbiIsImEiOiJjanAyenN4OTUwY3JhM3dsbndkNnNpYTR3In0.NTCzG2kg5DjLkx8zI7bT3Q';
 
-var layer_tile = L.tileLayer(mapboxUrl, {pane: "pane_Geo_House",id: "mapbox.light", attribution: '', maxZoom: 28, accessToken: accessToken}).addTo(map);
+var layer_tile = L.tileLayer(mapboxUrl, {pane: "pane_Geo_House", attribution: '', maxZoom: 28, accessToken: accessToken}).addTo(map);
 var layer_cities = L.geoJson(json_cities, {pane: "pane_Geo_House", pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     }, style: myStyle} ).addTo(map);
