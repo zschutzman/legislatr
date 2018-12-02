@@ -7,7 +7,7 @@ function highlightFeature(e) {
 
     
     if (highlightLayer) {
-      maptype = highlightLayer.getPane().getAttribute("class").substr(26,3);
+      //maptype = highlightLayer.getPane().getAttribute("class").substr(26,3);
       for (i in e.target._eventParents) {
 
         e.target._eventParents[i].resetStyle(highlightLayer);
@@ -18,7 +18,7 @@ function highlightFeature(e) {
      return;
    }
    highlightLayer = e.target;    
-   maptype = highlightLayer.getPane().getAttribute("class").substr(26,3);
+   //maptype = highlightLayer.getPane().getAttribute("class").substr(26,3);
    document.getElementById('districtTable').innerHTML = highlightLayer.feature.properties['infostring'];
 
    
