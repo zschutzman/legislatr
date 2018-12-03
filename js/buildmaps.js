@@ -61,7 +61,7 @@ function buildmap(legend_entries){
     });
     bounds_group.addLayer(layer_Geo_h);
         //map.addLayer(layer_Hex_c);        
-     
+                 
 var mapboxUrl = 'https://api.mapbox.com/styles/v1/zschutzman/cjp4fdxmo0uv62spdtehzites/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}';//'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
 var accessToken = 'pk.eyJ1IjoienNjaHV0em1hbiIsImEiOiJjanAyenN4OTUwY3JhM3dsbndkNnNpYTR3In0.NTCzG2kg5DjLkx8zI7bT3Q';
 
@@ -147,6 +147,7 @@ var layer_cities = L.geoJson(json_cities, {pane: "pane_Geo_House", pointToLayer:
         control = new L.control.layers(baseMaps,{},{collapsed:true, position:'bottomleft'}).addTo(map);
         map.fitBounds(bounds_group.getBounds());
         setBounds(bounds_group.getBounds());
+        
 
 
 
