@@ -25,7 +25,7 @@ function fillfacts() {
     The Commission unanimously adopted State House and Senate plans, but failed to agree on a set of Congressional districts. \
     The Connecticut Supreme Court ordered the appointment of a special master to draw the Congressional districts, and his plan was enacted by the Court.\
     </p>\    
-    <h4> Since then... </h4> <p>Connecticut has had no court cases or challenges otherwise to any of its districting plans.\
+    <h4> Since then... </h4> <p>Connecticut has had no gerrymandering court cases or other challenges to any of its districting plans in the last decade.\
     </p>\
     <h4> What to Look for in 2020... </h4> <p>Based on population estimates, Connecticut is not expected to gain or lose any seats in the U.S. House of Representatives following the\
     2020 Census. \
