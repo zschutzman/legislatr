@@ -29,7 +29,7 @@ var geojsonMarkerOptions = {
 function buildmap(legend_entries){
 
     map = new L.map('map', {
-        zoomControl:true, maxZoom:28, minZoom:4.5,
+        zoomControl:true, maxZoom:28, minZoom:1.5,
         crs : L.CRS.EPSG3857,
         zoom: 10,
         attributionControl: false,
@@ -41,6 +41,7 @@ function buildmap(legend_entries){
     stripes = new L.StripePattern();
     stripes.addTo(map);
     function setBounds(b) {
+        console.log(b);
         map.options.maxBounds = b;
     }
     map.createPane('pane_Geo_House');       
@@ -146,7 +147,7 @@ var layer_cities = L.geoJson(json_cities, {pane: "pane_Geo_House", pointToLayer:
         baseMaps = {"Geographic House":grp_house, "Hex House":layer_Hex_h, "Geographic Senate":grp_sen, "Hex Senate":layer_Hex_s, "Geographic Congress":grp_cong, "Hex Congress":layer_Hex_c};
         control = new L.control.layers(baseMaps,{},{collapsed:true, position:'bottomleft'}).addTo(map);
         map.fitBounds(bounds_group.getBounds());
-        setBounds(bounds_group.getBounds());
+        //setBounds(bounds_group.getBounds());
         
 
 
